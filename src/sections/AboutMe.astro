@@ -1,37 +1,18 @@
 ---
+import { Image } from "astro:assets";
 import LocationIcon from "../icons/location.astro";
 import ClockIcon from "../icons/clock.astro";
-
-function getTime() {
-  let currentDate = new Date();
-
-  let options: Intl.DateTimeFormatOptions = {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: false,
-    timeZone: "Europe/Madrid",
-  };
-
-  let madridTime = new Intl.DateTimeFormat("default", options).format(
-    currentDate
-  );
-  return madridTime;
-}
-
-let time;
-
-setInterval(() => {
-  time = getTime().toString();
-}, 1000);
 ---
 
 <section>
   <div id="aboutme" class="hero__name-container">
-    <img
+    <Image
       class="hero__avatar"
       src="https://avatars.githubusercontent.com/u/108923627?v=4"
       alt="xxixiio"
+      width="1200"
+      height="1200"
+      loading="eager"
     />
     <div>
       <h1 class="hero__name accent">seb</h1>
@@ -57,7 +38,7 @@ setInterval(() => {
       </li>
       <li class="info__element info__time">
         <ClockIcon style="height: auto; width: 25px; filter: invert(1);" />
-        <p>{time}</p>
+        <p id="time">00:00:00</p>
       </li>
     </ul>
   </div>
@@ -74,6 +55,7 @@ setInterval(() => {
   .hero__avatar {
     border-radius: 100%;
     height: 60%;
+    width: auto;
   }
 
   .hero__name {
@@ -110,3 +92,28 @@ setInterval(() => {
     filter: invert(1);
   }
 </style>
+
+<script>
+  function getTime() {
+    let currentDate = new Date();
+
+    let options: Intl.DateTimeFormatOptions = {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false,
+      timeZone: "Europe/Madrid",
+    };
+
+    let madridTime = new Intl.DateTimeFormat("default", options).format(
+      currentDate
+    );
+    return madridTime;
+  }
+
+  document.getElementById("time").textContent = getTime();
+
+  setInterval(() => {
+    document.getElementById("time").textContent = getTime();
+  }, 1000);
+</script>
