@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   name: string;
   image: string;
@@ -9,7 +11,7 @@ const { name, image, color } = Astro.props;
 ---
 
 <div class="skill__container" style={{ backgroundColor: color }}>
-  <img class="skill__image" src={image} alt={name} />
+  <Image class="skill__image" src={image} alt={name} width={30} height={30} loading="eager"/>
   <span class="skill__name">{name}</span>
 </div>
 
