@@ -1,120 +1,117 @@
 ---
 import "../styles/normalize.css";
+import SEO from "../components/SEO.astro";
 
 interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <SEO title={title} description={description} />
   </head>
   <body>
     <slot />
+    <style is:global>
+      :root {
+        /* --text: #F4F0EF; */
+        --text: #fff4db;
+        --background: #0f0f0f;
+        --primary: #c3aea9;
+        --secondary: #486751;
+        --accent: #769f9f;
+        --grey: #a1a3a7;
+
+        --max-w: 42rem;
+      }
+
+      @font-face {
+        font-family: "AtkinsonHyperlegible";
+        src: url("/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf")
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "AtkinsonHyperlegible";
+        src: url("/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Bold.ttf")
+          format("truetype");
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "AtkinsonHyperlegible";
+        src: url("/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Italic.ttf")
+          format("truetype");
+        font-weight: normal;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "AtkinsonHyperlegible";
+        src: url("/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-BoldItalic.ttf")
+          format("truetype");
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      * {
+        font-family: "AtkinsonHyperlegible", sans-serif;
+        scroll-behavior: smooth;
+        line-height: 1.5;
+      }
+
+      body {
+        margin: 0 auto;
+        padding: 0;
+        color: var(--text);
+        background-color: var(--background);
+        max-width: var(--max-w);
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--text);
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      input {
+        all: unset;
+      }
+
+      button,
+      input[type="submit"],
+      input[type="reset"] {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+      }
+
+      .primary {
+        color: var(--primary);
+      }
+
+      .secondary {
+        color: var(--secondary);
+      }
+
+      .accent {
+        color: var(--accent);
+      }
+    </style>
   </body>
 </html>
-<style is:global>
-  :root {
-    /* --text: #F4F0EF; */
-    --text: #fff4db;
-    --background: #0f0f0f;
-    --primary: #c3aea9;
-    --secondary: #486751;
-    --accent: #769f9f;
-    --grey: #a1a3a7;
-
-    --max-w: 42rem;
-  }
-
-  @font-face {
-    font-family: "AtkinsonHyperlegible";
-    src: url("/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf")
-      format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "AtkinsonHyperlegible";
-    src: url("/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Bold.ttf")
-      format("truetype");
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "AtkinsonHyperlegible";
-    src: url("/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Italic.ttf")
-      format("truetype");
-    font-weight: normal;
-    font-style: italic;
-  }
-
-  @font-face {
-    font-family: "AtkinsonHyperlegible";
-    src: url("/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-BoldItalic.ttf")
-      format("truetype");
-    font-weight: bold;
-    font-style: italic;
-  }
-
-  * {
-    font-family: "AtkinsonHyperlegible", sans-serif;
-    scroll-behavior: smooth;
-    line-height: 1.5;
-  }
-
-  body {
-    margin: 0 auto;
-    padding: 0;
-    color: var(--text);
-    background-color: var(--background);
-    max-width: var(--max-w);
-  }
-
-  a {
-    text-decoration: none;
-    color: var(--text);
-  }
-
-  ul {
-    list-style-type: none;
-  }
-
-  input {
-    all: unset;
-  }
-
-  button,
-  input[type="submit"],
-  input[type="reset"] {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-  }
-
-  .primary {
-    color: var(--primary);
-  }
-
-  .secondary {
-    color: var(--secondary);
-  }
-
-  .accent {
-    color: var(--accent);
-  }
-</style>
