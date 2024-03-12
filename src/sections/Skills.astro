@@ -1,0 +1,23 @@
+---
+import skills from "../consts/skills.js";
+import Skill from "../components/Skill.astro";
+---
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills__items">
+    {
+      skills.map((s, i) => (
+        <Skill name={s.name} image={s.image} color={s.color} />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .skills__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+</style>

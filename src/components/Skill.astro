@@ -1,0 +1,34 @@
+---
+interface Props {
+  name: string;
+  image: string;
+  color: string;
+}
+
+const { name, image, color } = Astro.props;
+---
+
+<div class="skill__container" style={{ backgroundColor: color }}>
+  <img class="skill__image" src={image} alt={name} />
+  <span class="skill__name">{name}</span>
+</div>
+
+<style>
+  .skill__container {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    transition: transform 0.05s ease-in;
+  }
+
+  .skill__container:hover {
+    cursor: default;
+    transform: scale(1.05);
+  }
+
+  .skill__image {
+    width: 30px;
+    user-select: none;
+  }
+</style>
