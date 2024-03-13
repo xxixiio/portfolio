@@ -30,11 +30,6 @@ const skills = [
     color: "#15314D",
   },
   {
-    name: "Rust",
-    image: "/img/tech/rust-icon.webp",
-    color: "#4B2A1D",
-  },
-  {
     name: "Git",
     image: "/img/tech/git-icon.webp",
     color: "#4B2A1D",
