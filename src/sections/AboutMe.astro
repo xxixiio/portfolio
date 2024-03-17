@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import LocationIcon from "../icons/location.astro";
 import ClockIcon from "../icons/clock.astro";
+import GithubIcon from "../icons/github.astro";
 ---
 
 <section>
@@ -19,8 +20,13 @@ import ClockIcon from "../icons/clock.astro";
       <a
         class="hero__username"
         href="https://github.com/xxixiio/"
-        target="__blank">@xxixiio</a
+        target="__blank"
       >
+        <span class="hero__github">
+          <GithubIcon />
+        </span>
+        @xxixiio
+      </a>
     </div>
   </div>
   <h2 class="hero__hey"><span class="wave">👋</span> Hey!</h2>
@@ -63,7 +69,17 @@ import ClockIcon from "../icons/clock.astro";
   }
 
   .hero__username {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 8px;
+    margin-top: 3px;
     color: var(--grey);
+  }
+
+  .hero__github {
+    line-height: 1;
+    filter: invert(1);
   }
 
   .hero__hey {
