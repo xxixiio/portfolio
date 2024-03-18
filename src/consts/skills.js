@@ -2,37 +2,37 @@ const skills = [
   {
     name: "HTML",
     image: "/img/tech/html-icon.webp",
-    color: "#4B2A1D",
+    color: "red",
   },
   {
     name: "CSS",
     image: "/img/tech/css-icon.webp",
-    color: "#15314D",
+    color: "blue",
   },
   {
     name: "JavaScript",
     image: "/img/tech/js-icon.webp",
-    color: "#47361E",
+    color: "yellow",
   },
   {
     name: "React",
     image: "/img/tech/react-icon.webp",
-    color: "#15314D",
+    color: "blue",
   },
   {
     name: "Node.js",
     image: "/img/tech/node-js-icon.webp",
-    color: "#0e3310",
+    color: "green",
   },
   {
     name: "Python",
     image: "/img/tech/py-icon.webp",
-    color: "#15314D",
+    color: "blue",
   },
   {
     name: "Git",
     image: "/img/tech/git-icon.webp",
-    color: "#4B2A1D",
+    color: "red",
   },
 ];
 

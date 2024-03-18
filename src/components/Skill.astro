@@ -8,9 +8,16 @@ interface Props {
 }
 
 const { name, image, color } = Astro.props;
+
+const colors = {
+  "red": "#4B2A1D",
+  "blue": "#15314D",
+  "yellow": "#47361E",
+  "green": "#0e3310"
+}
 ---
 
-<div class="skill__container" style={{ backgroundColor: color }}>
+<div class="skill__container" style={{ backgroundColor: colors[color] }}>
   <Image class="skill__image" src={image} alt={name} width={30} height={30} loading="eager"/>
   <span class="skill__name">{name}</span>
 </div>
