@@ -1,9 +1,10 @@
 ---
 interface Props {
   title: string;
+  to: string;
 }
 
-const { title } = Astro.props;
+const { title, to } = Astro.props;
 ---
 
 <!doctype html>
@@ -19,9 +20,105 @@ const { title } = Astro.props;
     <meta name="author" content="xxixiio" />
     <meta name="copyright" content="xxixiio" />
 
-    <meta http-equiv="refresh" content="0;url=/">
+    <meta http-equiv="refresh" content={"0;url=" + to} />
   </head>
   <body>
     <slot />
+    <style is:global>
+      :root {
+        /* --text: #F4F0EF; */
+        --text: #fff4db;
+        --background: #0f0f0f;
+        --primary: #c3aea9;
+        --secondary: #486751;
+        --accent: #769f9f;
+        --grey: #a1a3a7;
+
+        --max-w: 42rem;
+      }
+
+      @font-face {
+        font-family: "AtkinsonHyperlegible";
+        src: url("/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf")
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "AtkinsonHyperlegible";
+        src: url("/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Bold.ttf")
+          format("truetype");
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "AtkinsonHyperlegible";
+        src: url("/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Italic.ttf")
+          format("truetype");
+        font-weight: normal;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "AtkinsonHyperlegible";
+        src: url("/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-BoldItalic.ttf")
+          format("truetype");
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      * {
+        font-family: "AtkinsonHyperlegible", sans-serif;
+        scroll-behavior: smooth;
+        line-height: 1.5;
+      }
+
+      body {
+        margin: 0 auto;
+        padding: 0;
+        color: var(--text);
+        background-color: var(--background);
+        max-width: var(--max-w);
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--text);
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      input {
+        all: unset;
+      }
+
+      button,
+      input[type="submit"],
+      input[type="reset"] {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+      }
+
+      .primary {
+        color: var(--primary);
+      }
+
+      .secondary {
+        color: var(--secondary);
+      }
+
+      .accent {
+        color: var(--accent);
+      }
+    </style>
   </body>
 </html>
