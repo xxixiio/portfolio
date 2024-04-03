@@ -112,6 +112,19 @@ const { title, description } = Astro.props;
       .accent {
         color: var(--accent);
       }
+
+      @media only screen and (max-width: 768px) {
+        body {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
+          align-items: center;
+          padding: 30px;
+          margin: 0;
+        }
+      }
     </style>
   </body>
 </html>
