@@ -20,6 +20,11 @@ const skills = [
     color: "blue",
   },
   {
+    name: "Astro",
+    image: "/img/tech/astro-icon.webp",
+    color: "purple",
+  },
+  {
     name: "Node.js",
     image: "/img/tech/node-js-icon.webp",
     color: "green",
