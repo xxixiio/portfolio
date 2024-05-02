@@ -74,6 +74,12 @@ const { title, description } = Astro.props;
         color: var(--text);
         background-color: var(--background);
         max-width: var(--max-w);
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
       }
 
       a {
