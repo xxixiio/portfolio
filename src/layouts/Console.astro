@@ -1,0 +1,44 @@
+---
+import "../styles/normalize.css";
+import SEO from "../components/SEO.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEO title={title} description={description} />
+  </head>
+  <body>
+    <slot />
+    <style is:global>
+      :root {
+        --bg-color: #0000AB;
+        --text-color: #f8f8f8;
+      }
+
+      @font-face {
+        font-family: "Nihonium";
+        src: url("/fonts/Nihonium/nihonium113.console.ttf");
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: "Nihonium";
+        padding: 30px 50px;
+      }
+    </style>
+  </body>
+</html>

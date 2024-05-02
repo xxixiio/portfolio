@@ -1,7 +1,41 @@
 ---
-import Redirect from "../layouts/Redirect.astro";
+import Console from "../layouts/Console.astro";
 ---
 
-<Redirect title="404." to="/">
-  <p>Error 404. Redirecting to /.</p>
-</Redirect>
+<Console title="404" description="404">
+  <p>
+    A problem has been detected and the website has been shut down to prevent
+    damage to your computer. The problem seems to be caused by the following
+    file:
+  </p>
+  <br />
+  <p>- <span id="path">//</span></p>
+  <p>* 404__NOT_FOUND</p>
+  <br />
+  <p>If this is the first time you've seen this error screen, restart your computer.</p>
+  <p>If this screen appears again, follow these steps:</p>
+  <br />
+  <p>Check to make sure any new hardware or software is properly installed. If this
+    is a new installation, ask your hardware or software manufacturer for any Windows
+    updates you might need.</p>
+  <br />
+  <p>If problems continue, disable or remove any newly installed hardware or software.
+    Disable BIOS memory options such as caching or shadowing. If you need to use Safe
+    Mode to remove or disable components, restart your computer, press F8 to select
+    Advanced Startup Options, and then select Safe Mode.</p>
+  <br />
+  <p>Technical Information:</p>
+  <br />
+  <p>*** STOP: 0x000000ED (0x80F128D0, 0x0000009c, 0x00000000, 0x0000000)</p>
+  <p>*** STOP: 0x000000ED (0x80F128D0, 0x0000009c, 0x00000000, 0x0000000)</p>
+  <br>
+  <br>
+  <p>Press any key to return...</p>
+</Console>
+
+<script>
+  document.getElementById("path").innerText = window.location.href.toString();
+  document.addEventListener("keydown", (event) => {
+    window.location.href = "/";
+  });
+</script>
