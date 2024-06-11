@@ -1,0 +1,74 @@
+---
+interface Project {
+  name: String;
+  description: String;
+  state: Number;
+  built_with: String[];
+  url: String;
+  image: String;
+  github: String;
+}
+
+interface Props {
+  projectData: Project;
+}
+
+const { projectData } = Astro.props;
+---
+
+<div class="project__container">
+  <div class="project__image-container">
+    <img class="project__image" src={"/img/projects/" + projectData.image} alt="" />
+  </div>
+  <div class="project__content">
+    <div class="project__info">
+      <h3 class="project__title">{projectData.name}</h3>
+      <p>{projectData.description}</p>
+    </div>
+    <div class="project__used">
+      {
+        projectData.built_with.map(tech => (
+          <span class="project__tag">#{tech.toLowerCase()}</span>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .project__container {
+    width: 49%;
+    border: solid 1px #ccc;
+    border-radius: 8px;
+  }
+
+  .project__image-container {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .project__image {
+    width: 100%;
+  }
+
+  .project__content {
+    padding: 12px 12px;
+    margin-top: 0;
+  }
+
+  .project__title {
+    margin: 0;
+  }
+
+  .project__used {
+    display: flex;
+    gap: 10px;
+  }
+
+  .project__tag {
+    border: 1px solid #afafaf;
+    color: #afafaf;
+    border-radius: 20px;
+    padding: 1px 5px;
+  }
+</style>

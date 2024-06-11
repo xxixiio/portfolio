@@ -1,0 +1,22 @@
+---
+import Project from "../components/Project.astro"
+import projects from "../consts/projects"
+---
+
+<section>
+    <h2>Projects</h2>
+    <div class="projects__content">
+        {
+            projects.map(projectData => (
+                <Project projectData={projectData} />
+            ))
+        }
+    </div>
+</section>
+
+<style>
+    .projects__content {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
