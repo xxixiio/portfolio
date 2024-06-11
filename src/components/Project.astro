@@ -1,4 +1,7 @@
 ---
+import Button from './Button.astro';
+import GithubIcon from '../icons/github-simplified.astro';
+
 interface Project {
   name: String;
   description: String;
@@ -18,7 +21,11 @@ const { projectData } = Astro.props;
 
 <div class="project__container">
   <div class="project__image-container">
-    <img class="project__image" src={"/img/projects/" + projectData.image} alt="" />
+    <img
+      class="project__image"
+      src={"/img/projects/" + projectData.image}
+      alt=""
+    />
   </div>
   <div class="project__content">
     <div class="project__info">
@@ -27,9 +34,18 @@ const { projectData } = Astro.props;
     </div>
     <div class="project__used">
       {
-        projectData.built_with.map(tech => (
+        projectData.built_with.map((tech) => (
           <span class="project__tag">#{tech.toLowerCase()}</span>
         ))
+      }
+    </div>
+    <div class="project__links">
+      <Button content="Repository" as="a" href={projectData.github} target="__blank" icon={"github"} class:list={"project__button"}/>
+      {
+        projectData.url ? (
+        <Button content="Website" as="a" href={projectData.url} target="__blank" icon={"web"}/>
+        )
+        : null
       }
     </div>
   </div>
@@ -38,17 +54,20 @@ const { projectData } = Astro.props;
 <style>
   .project__container {
     width: 49%;
-    border: solid 1px #ccc;
+    border: solid 1px #494949;
     border-radius: 8px;
   }
 
   .project__image-container {
+    height: 180px;
     overflow: hidden;
     border-radius: 8px;
   }
 
   .project__image {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .project__content {
@@ -70,5 +89,11 @@ const { projectData } = Astro.props;
     color: #afafaf;
     border-radius: 20px;
     padding: 1px 5px;
+  }
+
+  .project__links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
   }
 </style>

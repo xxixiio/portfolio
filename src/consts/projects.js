@@ -20,9 +20,9 @@ const projects = [
     description: "Verified Discord bot. Multipurpose bot including fun, interaction, administration commands... Available in English and Spanish. Stopped its support on June 2023.",
     state: 2,
     built_with: ["Node.js", "Discord.js"],
-    url: "https://white-noise.vercel.app/",
+    url: null,
     image: "kuma.png",
-    github: "https://github.com/xxixiio/white---noise",
+    github: "https://github.com/xxixiio/kuma",
   },
 ];
 
