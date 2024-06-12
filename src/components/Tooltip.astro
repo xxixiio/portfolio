@@ -1,0 +1,12 @@
+---
+interface Props {
+  content: String;
+}
+
+const { content } = Astro.props;
+---
+
+<p class="tooltip__container">
+  <span class="tooltip__message">{content}</span>
+  <slot />
+</p>

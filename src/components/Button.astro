@@ -33,7 +33,7 @@ let buttonClass = ["button__container", colorSelector[color]].join(" ")
 
 <style>
     .button__container {
-        border: solid 2px #fff;
+        border: solid 1px #fff;
         color: #fff;
         border-radius: 8px;
         padding: 12px 30px;
@@ -41,6 +41,13 @@ let buttonClass = ["button__container", colorSelector[color]].join(" ")
         justify-content: center;
         align-items: center;
         gap: 5px;
+        transition: background .2s ease;
+        transition: color .2s ease;
+
+        &:hover {
+            background-color: #fff;
+            color: var(--background);
+        }
     }
 
     .button__icon {

@@ -1,0 +1,30 @@
+---
+import Tooltip from "./Tooltip.astro";
+
+interface Props {
+  state: Number;
+}
+
+const { state } = Astro.props;
+
+const stateSelector = {
+    0: ["🔨 Building", "#f7ae73"],
+    1: ["💻 In Production", "#4efd66"],
+    2: ["🔴 Down", "#fd3838"]
+}
+
+const tooltipMessage = stateSelector[state as number][0]
+const color = stateSelector[state as number][1]
+---
+
+<Tooltip content={tooltipMessage}>
+    <div class="project-state" style={{ backgroundColor: color as string }}></div>
+</Tooltip>
+
+<style>
+  .project-state {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%; 
+  }
+</style>

@@ -1,6 +1,6 @@
 ---
-import Button from './Button.astro';
-import GithubIcon from '../icons/github-simplified.astro';
+import Button from "./Button.astro";
+import ProjectState from "./ProjectState.astro";
 
 interface Project {
   name: String;
@@ -29,7 +29,10 @@ const { projectData } = Astro.props;
   </div>
   <div class="project__content">
     <div class="project__info">
-      <h3 class="project__title">{projectData.name}</h3>
+      <h3 class="project__title">
+        {projectData.name}
+        <ProjectState state={projectData.state}/>
+      </h3>
       <p>{projectData.description}</p>
     </div>
     <div class="project__used">
@@ -40,12 +43,24 @@ const { projectData } = Astro.props;
       }
     </div>
     <div class="project__links">
-      <Button content="Repository" as="a" href={projectData.github} target="__blank" icon={"github"} class:list={"project__button"}/>
+      <Button
+        content="Repository"
+        as="a"
+        href={projectData.github}
+        target="__blank"
+        icon={"github"}
+        class:list={"project__button"}
+      />
       {
         projectData.url ? (
-        <Button content="Website" as="a" href={projectData.url} target="__blank" icon={"web"}/>
-        )
-        : null
+          <Button
+            content="Website"
+            as="a"
+            href={projectData.url}
+            target="__blank"
+            icon={"web"}
+          />
+        ) : null
       }
     </div>
   </div>
@@ -56,10 +71,13 @@ const { projectData } = Astro.props;
     width: 49%;
     border: solid 1px #494949;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 475px;
   }
 
   .project__image-container {
-    height: 180px;
+    height: 250px;
     overflow: hidden;
     border-radius: 8px;
   }
@@ -73,10 +91,17 @@ const { projectData } = Astro.props;
   .project__content {
     padding: 12px 12px;
     margin-top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .project__title {
     margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
   }
 
   .project__used {
@@ -94,6 +119,6 @@ const { projectData } = Astro.props;
   .project__links {
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
+    margin-top: auto;
   }
 </style>

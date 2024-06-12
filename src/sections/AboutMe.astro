@@ -1,5 +1,7 @@
 ---
 import { Image } from "astro:assets";
+import LinkAnchor from "../components/LinkAnchor.astro";
+import Tooltip from "../components/Tooltip.astro";
 import LocationIcon from "../icons/location.astro";
 import ClockIcon from "../icons/clock.astro";
 import GithubIcon from "../icons/github.astro";
@@ -34,8 +36,8 @@ import GithubIcon from "../icons/github.astro";
   <h2 class="hero__hey"><span class="wave">👋</span> Hey!</h2>
   <p>
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia sed magni
-    illo quos similique molestias, ducimus asperiores perferendis iure nemo
-    culpa repellendus dicta ratione unde possimus harum in nisi, cupiditate modi
+    illo quos similique molestias, ducimus <LinkAnchor content={"asperiores"} to={"https://www.google.com"} target="__blank"/> perferendis iure nemo
+    culpa repellendus dicta ratione unde <Tooltip content={"chunhua"}>possimus</Tooltip> harum in nisi, cupiditate modi
     ipsum blanditiis! Nostrum molestiae, nesciunt sit nam culpa rerum?
   </p>
   <div class="info__container">
