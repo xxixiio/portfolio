@@ -33,15 +33,15 @@ const { projectData } = Astro.props;
         {projectData.name}
         <ProjectState state={projectData.state}/>
       </h3>
-      <p>{projectData.description}</p>
+      <p class="project__description">{projectData.description}</p>
     </div>
-    <div class="project__used">
+    <p class="project__used">
       {
         projectData.built_with.map((tech) => (
           <span class="project__tag">#{tech.toLowerCase()}</span>
         ))
       }
-    </div>
+    </p>
     <div class="project__links">
       <Button
         content="Repository"
@@ -104,16 +104,20 @@ const { projectData } = Astro.props;
     gap: 12px;
   }
 
+  .project__description {
+    margin: 3px 0;
+  }
+
   .project__used {
     display: flex;
+    margin-top: 5px;
     gap: 10px;
   }
 
   .project__tag {
-    border: 1px solid #afafaf;
-    color: #afafaf;
+    color: #808080;
     border-radius: 20px;
-    padding: 1px 5px;
+    padding: 1px 0;
   }
 
   .project__links {
