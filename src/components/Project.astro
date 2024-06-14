@@ -31,7 +31,7 @@ const { projectData } = Astro.props;
     <div class="project__info">
       <h3 class="project__title">
         {projectData.name}
-        <ProjectState state={projectData.state}/>
+        <ProjectState state={projectData.state} />
       </h3>
       <p class="project__description">{projectData.description}</p>
     </div>
@@ -124,5 +124,16 @@ const { projectData } = Astro.props;
     display: flex;
     justify-content: space-around;
     margin-top: auto;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .project__container {
+      width: 100%;
+      height: fit-content;
+    }
+
+    .project__image-container {
+      height: 150px;
+    }
   }
 </style>

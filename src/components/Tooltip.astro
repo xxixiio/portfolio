@@ -22,6 +22,16 @@ const { content } = Astro.props;
       display: block;
       opacity: 1;
     }
+
+    &:focus > .tooltip__message {
+      display: block;
+      opacity: 1;
+    }
+
+    &:active > .tooltip__message {
+      display: block;
+      opacity: 1;
+    }
   }
 
   .tooltip__message {

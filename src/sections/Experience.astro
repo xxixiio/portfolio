@@ -12,12 +12,14 @@ import experience from "../consts/experience.js";
             <div class="timeline__main">
               <div class="timeline__title">
                 <h3 class="timeline__name accent">{e.name}</h3>
-                <span class="timeline__as">as</span>
-                <p class="timeline__position">{e.position}</p>
+                <div>
+                  <span class="timeline__as">as</span>
+                  <p class="timeline__position">{e.position}</p>
+                </div>
               </div>
               <p class="timeline__date">
-              {e.startDate + (e.endDate ? " - " + e.endDate : "")}
-            </p>
+                {e.startDate + (e.endDate ? " - " + e.endDate : "")}
+              </p>
             </div>
             <p>{e.description}</p>
           </li>
@@ -31,6 +33,7 @@ import experience from "../consts/experience.js";
   .timeline__list {
     border: 0 solid #fff;
     border-left-width: 2px;
+    padding-left: 40px
   }
 
   .timeline__element {
@@ -70,17 +73,23 @@ import experience from "../consts/experience.js";
     display: flex;
     align-items: baseline;
     gap: 8px;
+    white-space: nowrap;
   }
 
   .timeline__as {
     font-size: 12px;
     color: #adadad;
-    padding-top: 8px;
+    margin-right: 3px;
   }
 
   .timeline__name {
     font-size: 24px;
     margin: 0;
+  }
+
+  .timeline__as,
+  .timeline__position {
+    display: inline;
   }
 
   .timeline__date {
@@ -97,5 +106,29 @@ import experience from "../consts/experience.js";
   .timeline__position {
     margin: 0;
     text-decoration: underline;
-  } 
+  }
+
+  @media only screen and (max-width: 768px) {
+    .timeline__title {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .timeline__date {
+      align-self: flex-start;
+      margin-top: 6px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .timeline__main {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .timeline__date {
+      margin: 0;
+    }
+  }
 </style>
