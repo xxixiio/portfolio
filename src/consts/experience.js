@@ -12,8 +12,8 @@ const experience = [
     position: "IT Assistant (Internship)",
     description:
       "Erasmus+ Experience. Tasks such as support and maintenance of computer equipment, Server management and Web development.",
-    startDate: "01/05/2024",
-    endDate: "30/05/2024",
+    startDate: "May 2024",
+    endDate: null,
   },
 ];
 
