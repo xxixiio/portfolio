@@ -1,0 +1,39 @@
+---
+import LinkAnchor from "../components/LinkAnchor.astro";
+import Tooltip from "../components/Tooltip.astro";
+---
+
+<section>
+  <h2 id="contact">Contact</h2>
+  <p>
+    Reach me via <LinkAnchor
+      to="mailto:bastijf17@gmail.com"
+      content="E-Mail"
+    />!
+  </p>
+  <Tooltip content={"Click to copy"} id="email-tooltip">
+    <button id="email-button">bastijf17@gmail.com</button>
+  </Tooltip>
+</section>
+
+<script>
+  const emailButton = document.getElementById("email-button");
+  const emailTooltip = document.getElementById("email-tooltip");
+
+  emailButton.addEventListener("click", () => {
+    navigator.clipboard
+      .writeText("bastijf17@gmail.com")
+      .then(() => {
+        emailTooltip.textContent = "Copied"
+        setTimeout(() => {
+            emailTooltip.textContent = "Click to copy"
+        }, 5000)
+      })
+      .catch((err) => {
+        emailTooltip.textContent = "Failed to copy"
+        setTimeout(() => {
+            emailTooltip.textContent = "Click to copy"
+        }, 5000)
+      });
+  });
+</script>
