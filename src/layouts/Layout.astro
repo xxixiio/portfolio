@@ -90,6 +90,7 @@ const { title, description } = Astro.props;
 
       ul {
         list-style-type: none;
+        padding: 0;
       }
 
       input {
@@ -120,16 +121,29 @@ const { title, description } = Astro.props;
         color: var(--accent);
       }
 
+      .highlight {
+        background-color: #82b99269;
+        color: #fff;
+        padding: 0 3px;
+        text-decoration: underline;
+      }
+
       @media only screen and (max-width: 768px) {
         body {
-          display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-          align-content: center;
-          justify-content: center;
-          align-items: center;
           padding: 30px;
-          margin: 0;
+          margin: 0 auto;
+        }
+
+        * {
+          font-size: 14px;
+        }
+
+        h2 {
+          font-size: 22px;
+        }
+
+        h3 {
+          font-size: 22px;
         }
       }
     </style>

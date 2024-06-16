@@ -1,13 +1,9 @@
 ---
-interface Props {
-  content: String;
-}
-
-const { content } = Astro.props;
+const { content, ...props } = Astro.props;
 ---
 
 <div class="tooltip__container">
-  <span class="tooltip__message">{content}</span>
+  <span class="tooltip__message" {...props}>{content}</span>
   <slot />
 </div>
 
@@ -19,6 +15,16 @@ const { content } = Astro.props;
     padding: 0;
 
     &:hover > .tooltip__message {
+      display: block;
+      opacity: 1;
+    }
+
+    &:focus > .tooltip__message {
+      display: block;
+      opacity: 1;
+    }
+
+    &:active > .tooltip__message {
       display: block;
       opacity: 1;
     }
