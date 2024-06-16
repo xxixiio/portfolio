@@ -1,18 +1,24 @@
 ---
 import LinkAnchor from "../components/LinkAnchor.astro";
 import Tooltip from "../components/Tooltip.astro";
+import EmailIcon from "../icons/email.astro";
 ---
 
-<section>
+<section class="contact__container">
   <h2 id="contact">Contact</h2>
   <p>
+    Want to work with me? Or just say hi?
+    <br>
     Reach me via <LinkAnchor
       to="mailto:bastijf17@gmail.com"
-      content="E-Mail"
+      content="E-mail"
     />!
   </p>
   <Tooltip content={"Click to copy"} id="email-tooltip">
-    <button id="email-button">bastijf17@gmail.com</button>
+    <button class="contact__email" id="email-button">
+      <EmailIcon class:list={"contact__email-icon"} />
+      bastijf17@gmail.com
+    </button>
   </Tooltip>
 </section>
 
@@ -37,3 +43,36 @@ import Tooltip from "../components/Tooltip.astro";
       });
   });
 </script>
+
+<style>
+  #contact {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .contact__container {
+    text-align: center;
+  }
+
+  .contact__email {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 5px;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 8px;
+    transition: background .1s ease-in;
+    margin-top: -10px;
+
+    &:hover {
+        background-color: var(--hover-gray);
+    }
+  }
+
+  .contact__email-icon {
+    width: 25px;
+    height: auto;
+  }
+</style>
