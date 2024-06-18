@@ -3,7 +3,7 @@ const experience = [
     name: "Freelance",
     position: "Frontend Developer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum iste sed nisi tenetur maiores similique!",
+      "Independently design, build, and maintain responsive websites for various clients, ensuring high-quality user experiences and adherence to modern web standards.",
     startDate: "Currently",
     endDate: null,
   },
