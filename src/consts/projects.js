@@ -13,7 +13,7 @@ const projects = [
     state: 0,
     built_with: ["Astro", "Api", "Web"],
     url: "https://white-noise.vercel.app/",
-    image: "white---noise.png",
+    image: "white---noise.jpg",
     github: "https://github.com/xxixiio/white---noise",
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     state: 2,
     built_with: ["Node.js", "Discord.js", "Bot"],
     url: null,
-    image: "kuma.png",
+    image: "kuma.jpg",
     github: "https://github.com/xxixiio/kuma",
   },
   {
@@ -33,7 +33,7 @@ const projects = [
     state: 1,
     built_with: ["Astro", "Web"],
     url: "https://xxixiio.github.io/waves-festival/",
-    image: "waves-festival.png",
+    image: "waves-festival.jpg",
     github: "https://github.com/xxixiio/waves-festival",
   },
 ];
