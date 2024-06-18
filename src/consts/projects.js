@@ -19,7 +19,7 @@ const projects = [
   {
     name: "Kuma",
     description:
-      "Verified Discord bot. Multipurpose bot including fun, interaction, administration commands... Available in English and Spanish. Stopped its support on June 2023.",
+      "Verified Discord bot. Multipurpose bot including fun, interaction, administration commands, and more. Stopped its support on June 2023.",
     state: 2,
     built_with: ["Node.js", "Discord.js", "Bot"],
     url: null,
@@ -31,7 +31,7 @@ const projects = [
     description:
       "Concept webpage for a music festival.",
     state: 1,
-    built_with: ["Astro"],
+    built_with: ["Astro", "Web"],
     url: "https://xxixiio.github.io/waves-festival/",
     image: "waves-festival.png",
     github: "https://github.com/xxixiio/waves-festival",
