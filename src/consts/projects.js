@@ -29,7 +29,7 @@ const projects = [
   {
     name: "Waves Festival",
     description:
-      "Concept webpage for a music festival.",
+      "Concept webpage for a music festival. Made with Astro.",
     state: 1,
     built_with: ["Astro", "Web"],
     url: "https://xxixiio.github.io/waves-festival/",
