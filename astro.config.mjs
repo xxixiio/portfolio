@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,4 +20,6 @@ export default defineConfig({
       include: ["**/react/*"],
     }),
   ],
+  output: "server",
+  adapter: vercel(),
 });
