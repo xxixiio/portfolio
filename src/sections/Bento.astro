@@ -1,72 +1,73 @@
-<div class="container">
-  <div class="grid">
-    <div class="bento__item salmon">
-      <p>Salmon</p>
+---
+import Github from "../components/Bento/Github.astro";
+---
+
+<div class="bento__container">
+  <div class="bento__grid">
+    <div class="bento__item bento__1">
+      <p>bento__1</p>
     </div>
-    <div class="bento__item broccoli">
-      <p>Broccoli</p>
+    <div class="bento__item bento__2">
+      <p>bento__2</p>
     </div>
-    <div class="bento__item tamago">
-      <p>Tamago</p>
+    <div class="bento__item bento__3">
+      <p>bento__3</p>
     </div>
-    <div class="bento__item pork">
-      <p>Pork</p>
+    <Github class:list={"bento__item bento__4"}/>
+    <div class="bento__item bento__5">
+      <p>bento__4</p>
     </div>
-    <div class="bento__item edamame">
-      <p>Edamame</p>
-    </div>
-    <div class="bento__item tomato">
-      <p>Tomato</p>
+    <div class="bento__item bento__6">
+      <p>bento__6</p>
     </div>
   </div>
 </div>
 
 <style>
-  .salmon {
+  .bento__1 {
     grid-column: span 2;
     grid-row: span 1;
     background-color: rgba(255, 182, 193, 0.5);
   }
 
-  .broccoli {
+  .bento__2 {
     grid-column: span 2;
     grid-row: span 1;
     background-color: rgba(173, 255, 47, 0.5);
   }
 
-  .tamago {
+  .bento__3 {
     grid-column: span 1;
     grid-row: span 4;
     background-color: rgba(255, 255, 224, 0.5);
   }
 
-  .pork {
+  .bento__4 {
     grid-column: span 2;
     grid-row: span 2;
-    background-color: rgba(210, 180, 140, 0.5);
   }
 
-  .edamame {
+  .bento__5 {
     grid-column: span 1;
     grid-row: span 2;
     background-color: rgba(144, 238, 144, 0.5);
   }
 
-  .tomato {
+  .bento__6 {
     grid-column: span 3;
     grid-row: span 2;
     background-color: rgba(255, 160, 122, 0.5);
   }
 
-  .container {
+  .bento__container {
     display: flex;
     height: 100%;
-    width: var(--max-w);
+    width: 100%;
     align-items: center;
     justify-content: center;
   }
 
-  .grid {
+  .bento__grid {
     display: grid;
     height: 100%;
     width: 100%;
@@ -78,15 +79,53 @@
     box-shadow:
       0 2px 4px rgba(0, 0, 0, 0.25),
       0 1px 2px rgba(0, 0, 0, 0.1);
+    justify-content: center;
   }
 
   .bento__item {
     border-radius: 8px;
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
 
     &:hover {
-        transform: scale(.96    );
-        cursor: crosshair;
+      transform: scale(0.96);
+      cursor: crosshair;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .bento__grid {
+      grid-template-columns: repeat(4, 18vw);
+      grid-template-rows: repeat(4, 15vw);
+    }
+
+    .bento__1 {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+
+    .bento__2 {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+
+    .bento__3 {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+
+    .bento__4 {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
+
+    .bento__5 {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+
+    .bento__6 {
+      grid-column: span 3;
+      grid-row: span 2;
     }
   }
 </style>
