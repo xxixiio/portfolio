@@ -63,7 +63,7 @@ function NowPlaying({ className }) {
             crossOrigin="anonymous"
           />
           <p className="bento-spotify__title">{nowPlaying.title}</p>
-          <p>{nowPlaying.artist}</p>
+          <p className="bento-spotify__artists">{nowPlaying.artist}</p>
         </div>
       ) : (
         <div>

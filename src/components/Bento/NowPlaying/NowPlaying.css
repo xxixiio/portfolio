@@ -59,4 +59,8 @@
   .bento-spotify__title {
     font-size: 12px;
   }
+
+  .bento-spotify__artists {
+    display: none;
+  }
 }
