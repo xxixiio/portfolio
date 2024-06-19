@@ -1,5 +1,6 @@
 ---
 import Github from "../components/Bento/Github.astro";
+import NowPlaying from "../components/Bento/NowPlaying/NowPlaying.jsx";
 ---
 
 <div class="bento__container">
@@ -10,9 +11,7 @@ import Github from "../components/Bento/Github.astro";
     <div class="bento__item bento__2">
       <p>bento__2</p>
     </div>
-    <div class="bento__item bento__3">
-      <p>bento__3</p>
-    </div>
+    <NowPlaying client:load className={"bento__item bento__3"} />
     <Github class:list={"bento__item bento__4"}/>
     <div class="bento__item bento__5">
       <p>bento__4</p>
@@ -84,7 +83,7 @@ import Github from "../components/Bento/Github.astro";
 
   .bento__item {
     border-radius: 8px;
-    transition: transform 0.5s ease;
+    transition: all 0.5s ease;
 
     &:hover {
       transform: scale(0.96);
@@ -114,7 +113,7 @@ import Github from "../components/Bento/Github.astro";
     }
 
     .bento__4 {
-      grid-column: span 3;
+      grid-column: span 2;
       grid-row: span 2;
     }
 
