@@ -1,10 +1,3 @@
-/*
-States:
-- 0 - Building
-- 1 - Completed and in production
-- 2 - Completed
-*/
-
 const projects = [
   {
     name: "white---noise",
@@ -17,24 +10,34 @@ const projects = [
     github: "https://github.com/xxixiio/white---noise",
   },
   {
+    name: "Waves Festival",
+    description:
+      "Concept webpage for a music festival. Made with Astro.",
+    state: 2,
+    built_with: ["Astro", "Web"],
+    url: "https://xxixiio.github.io/waves-festival/",
+    image: "waves-festival.jpg",
+    github: "https://github.com/xxixiio/waves-festival",
+  },
+  {
     name: "Kuma",
     description:
       "Verified Discord bot. Multipurpose bot including fun, interaction, administration commands, and more. Stopped its support on June 2023.",
-    state: 2,
+    state: 3,
     built_with: ["Node.js", "Discord.js", "Bot"],
     url: null,
     image: "kuma.jpg",
     github: "https://github.com/xxixiio/kuma",
   },
   {
-    name: "Waves Festival",
+    name: "wtxted",
     description:
-      "Concept webpage for a music festival. Made with Astro.",
+      "Terminal based text editor for Unix-like systems.",
     state: 1,
-    built_with: ["Astro", "Web"],
-    url: "https://xxixiio.github.io/waves-festival/",
-    image: "waves-festival.jpg",
-    github: "https://github.com/xxixiio/waves-festival",
+    built_with: ["Rust"],
+    url: null,
+    image: "wtxted.jpg",
+    github: "https://github.com/xxixiio/wtxted",
   },
 ];
 
