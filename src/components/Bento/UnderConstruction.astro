@@ -1,0 +1,25 @@
+---
+const { class: className, ...props } = Astro.props;
+---
+
+<div class:list={className + " bento-uc__container"} {...props}>
+    <p>🔨🔩 Under Construction</p>
+</div>
+
+<style>
+    .bento-uc__container {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        background-color: #1b1b1b;
+        border: solid 1px #272727;
+        text-transform: uppercase;
+
+        & > p {
+            font-weight: bold;
+            font-size: 110%;
+            color: #fff;
+        }
+    }
+</style>

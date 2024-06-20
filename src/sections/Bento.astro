@@ -1,6 +1,7 @@
 ---
 import Github from "../components/Bento/Github.astro";
 import NowPlaying from "../components/Bento/NowPlaying/NowPlaying.jsx";
+import UnderConstruction from "../components/Bento/UnderConstruction.astro";
 ---
 
 <div class="bento__container">
@@ -12,13 +13,11 @@ import NowPlaying from "../components/Bento/NowPlaying/NowPlaying.jsx";
       <p>bento__2</p>
     </div>
     <NowPlaying client:load className={"bento__item bento__3"} />
-    <Github class:list={"bento__item bento__4"}/>
+    <Github class:list={"bento__item bento__4"} />
     <div class="bento__item bento__5">
       <p>bento__4</p>
     </div>
-    <div class="bento__item bento__6">
-      <p>bento__6</p>
-    </div>
+    <UnderConstruction class="bento__item bento__6" />
   </div>
 </div>
 
@@ -38,7 +37,6 @@ import NowPlaying from "../components/Bento/NowPlaying/NowPlaying.jsx";
   .bento__3 {
     grid-column: span 1;
     grid-row: span 4;
-    background-color: rgba(255, 255, 224, 0.5);
   }
 
   .bento__4 {
@@ -55,7 +53,6 @@ import NowPlaying from "../components/Bento/NowPlaying/NowPlaying.jsx";
   .bento__6 {
     grid-column: span 3;
     grid-row: span 2;
-    background-color: rgba(255, 160, 122, 0.5);
   }
 
   .bento__container {
