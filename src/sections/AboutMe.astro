@@ -54,18 +54,6 @@ import GithubIcon from "../icons/github.astro";
     <br />
     Let's talk, <LinkAnchor content="contact me" to="#contact" />!
   </p>
-  <div class="info__container">
-    <ul class="info__list">
-      <li class="info__element">
-        <LocationIcon style="height: auto; width: 25px; filter: invert(1);" />
-        <p>Girona, Spain</p>
-      </li>
-      <li class="info__element info__time">
-        <ClockIcon style="height: auto; width: 25px; filter: invert(1);" />
-        <p id="time">00:00:00</p>
-      </li>
-    </ul>
-  </div>
 </section>
 
 <style>
@@ -140,45 +128,4 @@ import GithubIcon from "../icons/github.astro";
     font-size: 28px;
     margin-bottom: -8px;
   }
-
-  .info__list {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .info__element {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .info__icon {
-    width: 25px;
-    filter: invert(1);
-  }
 </style>
-
-<script>
-  function getTime() {
-    let currentDate = new Date();
-
-    let options: Intl.DateTimeFormatOptions = {
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: false,
-      timeZone: "Europe/Madrid",
-    };
-
-    let madridTime = new Intl.DateTimeFormat("default", options).format(
-      currentDate
-    );
-    return madridTime;
-  }
-
-  document.getElementById("time").textContent = getTime();
-
-  setInterval(() => {
-    document.getElementById("time").textContent = getTime();
-  }, 1000);
-</script>

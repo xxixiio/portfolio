@@ -2,6 +2,7 @@
 import Github from "../components/Bento/Github.astro";
 import NowPlaying from "../components/Bento/NowPlaying/NowPlaying.jsx";
 import UnderConstruction from "../components/Bento/UnderConstruction.astro";
+import Time from "../components/Bento/Time.astro";
 ---
 
 <div class="bento__container">
@@ -14,9 +15,7 @@ import UnderConstruction from "../components/Bento/UnderConstruction.astro";
     </div>
     <NowPlaying client:load className={"bento__item bento__3"} />
     <Github class:list={"bento__item bento__4"} />
-    <div class="bento__item bento__5">
-      <p>bento__4</p>
-    </div>
+    <Time class="bento__item bento__5" />
     <UnderConstruction class="bento__item bento__6" />
   </div>
 </div>
@@ -47,7 +46,6 @@ import UnderConstruction from "../components/Bento/UnderConstruction.astro";
   .bento__5 {
     grid-column: span 1;
     grid-row: span 2;
-    background-color: rgba(144, 238, 144, 0.5);
   }
 
   .bento__6 {
