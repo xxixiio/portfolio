@@ -1,0 +1,17 @@
+---
+const { class: className, ...props } = Astro.props;
+---
+
+<div class:list={className + " bento-ib__container"} {...props}></div>
+
+<style>
+  .bento-ib__container {
+    background: linear-gradient(to top, #000000ea, #babaeba6), url("/img/what.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+  }
+</style>

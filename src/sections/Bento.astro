@@ -3,16 +3,14 @@ import Github from "../components/Bento/Github.astro";
 import NowPlaying from "../components/Bento/NowPlaying/NowPlaying.jsx";
 import UnderConstruction from "../components/Bento/UnderConstruction.astro";
 import Time from "../components/Bento/Time.astro";
+import ScrollingText from "../components/Bento/ScrollingText.astro";
+import ImageBento from "../components/Bento/ImageBento.astro";
 ---
 
 <div class="bento__container">
   <div class="bento__grid">
-    <div class="bento__item bento__1">
-      <p>bento__1</p>
-    </div>
-    <div class="bento__item bento__2">
-      <p>bento__2</p>
-    </div>
+    <ImageBento class="bento__item bento__1" />
+    <ScrollingText class="bento__item bento__2" />
     <NowPlaying client:load className={"bento__item bento__3"} />
     <Github class:list={"bento__item bento__4"} />
     <Time class="bento__item bento__5" />
@@ -24,13 +22,11 @@ import Time from "../components/Bento/Time.astro";
   .bento__1 {
     grid-column: span 2;
     grid-row: span 1;
-    background-color: rgba(255, 182, 193, 0.5);
   }
 
   .bento__2 {
     grid-column: span 2;
     grid-row: span 1;
-    background-color: rgba(173, 255, 47, 0.5);
   }
 
   .bento__3 {
