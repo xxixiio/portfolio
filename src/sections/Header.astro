@@ -1,6 +1,6 @@
 <header class="header__container">
   <p>
-    <a href="/">seb</a>
+    <a href="#" class="header__title">seb</a>
   </p>
   <ul class="header__list">
     <li><a href="#aboutme" title="About me">About me</a></li>
@@ -30,5 +30,12 @@
   .header__list {
     display: flex;
     gap: 15px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    .header__title,
+    .header__list > li > a {
+      font-size: 12px;
+    }
   }
 </style>
