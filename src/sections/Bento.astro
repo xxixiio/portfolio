@@ -72,16 +72,6 @@ import ImageBento from "../components/Bento/ImageBento.astro";
     justify-content: center;
   }
 
-  .bento__item {
-    border-radius: 8px;
-    transition: all 0.5s ease;
-
-    &:hover {
-      transform: scale(0.96);
-      cursor: crosshair;
-    }
-  }
-
   @media only screen and (max-width: 768px) {
     .bento__grid {
       grid-template-columns: repeat(4, 18vw);
@@ -116,6 +106,18 @@ import ImageBento from "../components/Bento/ImageBento.astro";
     .bento__6 {
       grid-column: span 3;
       grid-row: span 2;
+    }
+  }
+</style>
+
+<style is:global>
+  .bento__item {
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    outline: 1px solid #3d3d3d2c;
+
+    &:hover {
+      transform: scale(0.96);
     }
   }
 </style>

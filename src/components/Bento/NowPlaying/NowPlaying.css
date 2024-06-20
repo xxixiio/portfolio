@@ -4,16 +4,6 @@
   background-color: #1f1f1f80;
 }
 
-.bento__item {
-  border-radius: 8px;
-  transition: all 0.5s ease;
-
-  &:hover {
-    transform: scale(0.96);
-    cursor: crosshair;
-  }
-}
-
 .bento-spotify__image {
   width: 80%;
   height: auto;
@@ -32,6 +22,10 @@
   & > div > p {
     margin: 0;
     text-wrap: pretty;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }
 

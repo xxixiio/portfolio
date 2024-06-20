@@ -111,6 +111,10 @@ const { title, description } = Astro.props;
 
       section {
         margin: 60px 0;
+
+        & > h2 {
+          scroll-margin-top: 4.5em;
+        }
       }
 
       .primary {
@@ -129,7 +133,7 @@ const { title, description } = Astro.props;
         background-color: #82b99269;
         color: #fff;
         padding: 0 3px;
-        text-decoration: underline;
+        text-decoration: underline dotted;
       }
 
       @media only screen and (max-width: 768px) {
