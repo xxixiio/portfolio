@@ -10,14 +10,14 @@ import EmailIcon from "../icons/email.astro";
     Want to work with me? Or just say hi?
     <br>
     Reach me via <LinkAnchor
-      to="mailto:bastijf17@gmail.com"
+      to="mailto:hi@sebjf.dev"
       content="E-mail"
     />!
   </p>
   <Tooltip content={"Click to copy"} id="email-tooltip">
     <button class="contact__email" id="email-button">
       <EmailIcon class:list={"contact__email-icon"} />
-      bastijf17@gmail.com
+      hi@sebjf.dev
     </button>
   </Tooltip>
 </section>
@@ -28,7 +28,7 @@ import EmailIcon from "../icons/email.astro";
 
   emailButton.addEventListener("click", () => {
     navigator.clipboard
-      .writeText("bastijf17@gmail.com")
+      .writeText("hi@sebjf.dev")
       .then(() => {
         emailTooltip.textContent = "Copied"
         setTimeout(() => {
