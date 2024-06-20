@@ -13,7 +13,7 @@ export default defineConfig({
       noExternal: ["path-to-regexp"],
     },
   },
-  site: "https://xxixiio.tokyo",
+  site: "https://sebjf.dev",
   integrations: [
     sitemap(),
     react({
