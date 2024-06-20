@@ -30,6 +30,11 @@ const skills = [
     color: "green",
   },
   {
+    name: "MongoDB",
+    image: "/img/tech/mongo-icon.webp",
+    color: "green",
+  },
+  {
     name: "Python",
     image: "/img/tech/py-icon.webp",
     color: "blue",
@@ -38,6 +43,11 @@ const skills = [
     name: "Git",
     image: "/img/tech/git-icon.webp",
     color: "red",
+  },
+  {
+    name: "Linux",
+    image: "/img/tech/linux-icon.webp",
+    color: "yellow",
   },
 ];
 
