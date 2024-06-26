@@ -1,6 +1,6 @@
-<header class="header__container">
+<header class="header__container" id="header">
   <p>
-    <a href="#" class="header__title">seb</a>
+    <a href="/" class="header__title">seb</a>
   </p>
   <ul class="header__list">
     <li><a href="#" title="About me">About me</a></li>
@@ -15,21 +15,41 @@
     width: calc(100% - 32px);
     display: flex;
     justify-content: space-between;
-    background-color: #15131c;
-    padding: 2px 16px;
-    border-radius: 8px;
+    background-color: #574f753a;
+    padding: 12px 16px;
+    border-radius: 20px;
     margin-top: 15px;
-    outline: 1px solid #ffffff;
     overflow: auto;
+    backdrop-filter: blur(50px);
     position: sticky;
     top: 15px;
     z-index: 1000;
     white-space: nowrap;
+    transition: transform .5s ease-in;
+    transform: translateY(0);
+
+    > * {
+      margin: 0;
+    }
+  }
+
+  .header__hide {
+    transform: translateY(-100px);
   }
 
   .header__list {
     display: flex;
     gap: 15px;
+  }
+
+  .header__title,
+  .header__list > li > a {
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .header__list > li > a:hover {
+    text-decoration: underline;
   }
 
   @media only screen and (max-width: 400px) {
@@ -39,3 +59,18 @@
     }
   }
 </style>
+
+<script>
+  const $header = document.getElementById("header");
+  let prevY = 0;
+
+  window.onscroll = (e) => {
+    if (window.scrollY > prevY) {
+      $header.classList.add("header__hide");
+    } else if (window.scrollY < prevY) {
+      $header.classList.remove("header__hide");
+    }
+
+    prevY = window.scrollY;
+  };
+</script>
