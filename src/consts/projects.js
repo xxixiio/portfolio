@@ -20,6 +20,16 @@ const projects = [
     github: "https://github.com/xxixiio/waves-festival",
   },
   {
+    name: "Agency landing page",
+    description:
+      "Frontend Mentor challenge. Agency landing page made with no frameworks or libraries.",
+    state: 2,
+    built_with: ["Web"],
+    url: "https://xxixiio.github.io/frontend-mentor-agency-lp/",
+    image: "agency-lp.jpg",
+    github: "https://github.com/xxixiio/frontend-mentor-agency-lp ",
+  },
+  {
     name: "Kuma",
     description:
       "Verified Discord bot. Multipurpose bot including fun, interaction, administration commands, and more. Stopped its support on June 2023.",
