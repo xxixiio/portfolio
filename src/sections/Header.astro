@@ -68,7 +68,7 @@
   window.onscroll = (e) => {
     if (window.scrollY > prevY) {
       $header.classList.add("header__hide");
-    } else if (window.scrollY < prevY) {
+    } else if (window.scrollY < prevY || window.scrollY < 0) {
       $header.classList.remove("header__hide");
     }
 
