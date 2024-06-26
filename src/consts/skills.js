@@ -45,6 +45,11 @@ const skills = [
     color: "red",
   },
   {
+    name: "WordPress",
+    image: "/img/tech/wordpress-icon.webp",
+    color: "blue",
+  },
+  {
     name: "Linux",
     image: "/img/tech/linux-icon.webp",
     color: "yellow",
