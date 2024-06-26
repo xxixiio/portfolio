@@ -1,7 +1,17 @@
 <footer class="footer__container">
   <div class="footer__content">
-    <div class="footer__left">Made with <a href="https://astro.build/" target="_blank" class="footer__link">Astro</a>, deployed with <a href="https://vercel.com/" target="_blank" class="footer__link">Vercel</a> .</div>
-    <div class="footer_right">©2024 | @xxixiio</div>
+    <div class="footer__left">
+      Made with <a
+        href="https://astro.build/"
+        target="_blank"
+        class="footer__link">Astro</a
+      >, deployed with <a
+        href="https://vercel.com/"
+        target="_blank"
+        class="footer__link">Vercel</a
+      > .
+    </div>
+    <div class="footer__right">©2024 | @xxixiio</div>
   </div>
 </footer>
 
@@ -15,6 +25,7 @@
     border-top-color: var(--text);
     border-style: solid;
     padding: 14px 0;
+    text-wrap: nowrap;
   }
 
   .footer__content {
@@ -42,7 +53,7 @@
 
   @media only screen and (max-width: 400px) {
     .footer__left,
-    .footer__right   {
+    .footer__right {
       font-size: 12px;
     }
   }
