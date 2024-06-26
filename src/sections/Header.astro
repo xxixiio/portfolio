@@ -72,6 +72,8 @@
       $header.classList.remove("header__hide");
     }
 
-    prevY = window.scrollY;
+    if (!(window.scrollY < 0)) {
+      prevY = window.scrollY;
+    }
   };
 </script>
