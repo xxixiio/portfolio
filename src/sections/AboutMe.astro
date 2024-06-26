@@ -1,9 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import LinkAnchor from "../components/LinkAnchor.astro";
-import Tooltip from "../components/Tooltip.astro";
-import LocationIcon from "../icons/location.astro";
-import ClockIcon from "../icons/clock.astro";
 import GithubIcon from "../icons/github.astro";
 ---
 
@@ -33,7 +30,7 @@ import GithubIcon from "../icons/github.astro";
       </a>
     </div>
   </div>
-  <h2 class="hero__hey"><span class="wave">👋</span> Hey! ——</h2>
+  <h2 class="hero__hey accent"><span class="wave">👋</span> Hey! ——</h2>
   <p>
     I am a <span class="highlight">Front-end Developer</span> currently a student specializing in microcomputer systems and networks, based in Spain.
     <br />
@@ -124,7 +121,6 @@ import GithubIcon from "../icons/github.astro";
   }
 
   .hero__hey {
-    color: var(--accent);
     font-size: 28px;
     margin-bottom: -8px;
   }
