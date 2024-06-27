@@ -1,6 +1,7 @@
 ---
 import "../styles/normalize.css";
 import SEO from "../components/SEO.astro";
+import CommandMenu from "../components/CommandMenu"
 
 interface Props {
   title: string;
@@ -16,7 +17,9 @@ const { title, description } = Astro.props;
     <SEO title={title} description={description} />
   </head>
   <body>
-    <slot />
+    <CommandMenu client:load>
+      <slot />
+    </CommandMenu>
     <style is:global>
       :root {
         /* --text: #F4F0EF; */
@@ -29,6 +32,12 @@ const { title, description } = Astro.props;
         --hover-gray: #1d1d1d;
 
         --max-w: 45rem;
+
+        --cmd-background: rgba(28, 28, 29, 0.747);
+        --cmd-a1: rgb(53 53 54);
+        --cmd-a2: rgba(255 255 255 / 0.1);
+        --cmd-foreground: rgba(252 252 252 / 0.9);
+        --cmd-shadow: rgb(0 0 0 / 50%) 0px 16px 70px;
       }
 
       @font-face {
@@ -120,7 +129,6 @@ const { title, description } = Astro.props;
       h2 {
         font-size: 30px;
         margin-bottom: 35px;
-        color: #fff;
       }
 
       .primary {
@@ -158,6 +166,14 @@ const { title, description } = Astro.props;
 
         h3 {
           font-size: 22px;
+        }
+      }
+
+      @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+        .kbar-blur {
+          background-color: var(--cmd-background);
+          -webkit-backdrop-filter: saturate(300%) blur(25px);
+          backdrop-filter: saturate(300%) blur(25px);
         }
       }
     </style>
