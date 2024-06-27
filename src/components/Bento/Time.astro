@@ -7,6 +7,15 @@ const { class: className, ...props } = Astro.props;
 
 <div class:list={className + " bento-time__container"} {...props}>
   <ul class="info__list">
+    <li class="info__element info__flags">
+      <span>
+        <img class="flag" src="/img/flags/es.svg" alt="" />
+      </span> 
+      / 
+      <span>
+        <img class="flag" src="/img/flags/ph.svg" alt="" />
+      </span>
+    </li>
     <li class="info__element">
       <LocationIcon class:list={"info__icon"} />
       <p>Girona, Spain</p>
@@ -26,7 +35,11 @@ const { class: className, ...props } = Astro.props;
     justify-content: center;
     flex-direction: column;
     background-color: #1e2035;
-    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%,rgb(0, 0, 0) 30%);
+    mask-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgb(0, 0, 0) 30%
+    );
   }
 
   .info__list {
@@ -55,7 +68,7 @@ const { class: className, ...props } = Astro.props;
 
   @media only screen and (max-width: 768px) {
     .bento-time__container {
-        padding: 0px 5px;
+      padding: 0px 5px;
     }
 
     .info__element {
@@ -71,6 +84,15 @@ const { class: className, ...props } = Astro.props;
     .info__icon {
       width: 20px;
     }
+
+    .info__flags {
+      flex-direction: row;
+      gap: 6px;
+    }
+  }
+
+  .flag {
+    width: 16px;
   }
 </style>
 
