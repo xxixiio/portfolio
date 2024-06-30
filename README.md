@@ -1,54 +1,48 @@
-# Astro Starter Kit: Basics
 
+# 🐷🦀 Seb's porfolio 
+
+My personal portfolio. Made with Astro Build.
+
+
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file, follow `.env.template`
+
+`SPOTIFY_CLIENT_ID`
+
+`SPOTIFY_CLIENT_SECRET`
+
+`SPOTIFY_REFRESH_TOKEN`
+## CMS Integration
+
+To create blog posts I use [TinaCMS](https://tina.io/). It only runs locally. See [the docs](https://tina.io/docs/).
+
+- Run the app.
 ```sh
-npm create astro@latest -- --template basics
+npm run dev
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+- Enter the following URL.
 ```
+http://localhost:4321/admin/index.html
+```
+- You'll see some templates to create posts.
+- After creating a post, push the new post to the repository.
+## Other dependencies
+- [kbar](https://kbar.vercel.app/) - To create the command menu.
+- [astro-i18next](https://github.com/yassinedoghri/astro-i18next) - Multilanguage support.
+## Scripts
+- `npm run dev` - Astro preview + Run TinaCMS server.
+- `npm run dev:host` - Astro preview + Run TinaCMS server + host.
+- `npm run dev:not` - Astro preview without running TinaCMS.
+- `npm run i18next` - Generate i18next files.
+## Authors
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- [@xxixiio](https://www.github.com/xxixiio)
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## License
 
-## 🧞 Commands
+[MIT](https://choosealicense.com/licenses/mit/)
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
