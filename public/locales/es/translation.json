@@ -1,5 +1,7 @@
 {
-    "hero.aboutme1": "Soy un <0>Desarrollador Front-end</0> de España. Actualmente soy un estudiante especializandome en sistemas microinformáticos y redes.",
-    "hero.aboutme2": "Busco constantemente oportunidades para crecer y explorar nuevos desafíos. Me encanta experimentar con nuevas técnicas y codificar en proyectos personales, lo que me ayuda a perfeccionar mis habilidades y descubrir mi estilo único mientras hago un impacto real con los productos con los que trabajo.",
-    "hero.aboutme3": "En este portafolio, <0>puedes encontrar muestras de mis trabajos recientes y las habilidades que estoy desarrollando.</0> Para mí, cada proyecto aquí es un paso hacia el dominio de mi oficio, así que espero que no solo sea objetivamente excelente, sino que la pasión se refleje en la pieza final."
+  "hero": {
+    "aboutme1": "Soy un <0>Desarrollador Front-end</0> de España. Actualmente soy un estudiante especializandome en sistemas microinformáticos y redes.",
+    "aboutme2": "Busco constantemente oportunidades para crecer y explorar nuevos desafíos. Me encanta experimentar con nuevas técnicas y codificar en proyectos personales, lo que me ayuda a perfeccionar mis habilidades y descubrir mi estilo único mientras hago un impacto real con los productos con los que trabajo.",
+    "aboutme3": "En este portafolio, <0>puedes encontrar muestras de mis trabajos recientes y las habilidades que estoy desarrollando.</0> Para mí, cada proyecto aquí es un paso hacia el dominio de mi oficio, así que espero que no solo sea objetivamente excelente, sino que la pasión se refleje en la pieza final."
+  }
 }
