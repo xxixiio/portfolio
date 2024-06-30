@@ -1,13 +1,25 @@
 ---
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 import Project from "../components/Project.astro";
 import projects from "../consts/projects";
+
+const getProjectDescription = (project, language) => {
+  return project.translation && project.translation[language] ? project.translation[language].description : project.description;
+};
+
+const currentLanguage = i18next.language;
 ---
 
 <section>
   <h2 id="projects">{t("projects.title")}</h2>
   <div class="projects__content">
-    {projects.map((projectData) => <Project projectData={projectData} />)}
+    {projects.map((projectData) => {
+      const translatedProjectData = {
+        ...projectData,
+        description: getProjectDescription(projectData, currentLanguage),
+      };
+      return <Project projectData={translatedProjectData} />;
+    })}
   </div>
 </section>
 

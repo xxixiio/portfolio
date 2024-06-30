@@ -1,6 +1,12 @@
 ---
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 import experience from "../consts/experience.js";
+
+const getDescription = (e, language) => {
+  return e.translation && e.translation[language] ? e.translation[language].description : e.description;
+};
+
+const currentLanguage = i18next.language;
 ---
 
 <section>
@@ -22,7 +28,7 @@ import experience from "../consts/experience.js";
                 {e.startDate + (e.endDate ? " - " + e.endDate : "")}
               </p>
             </div>
-            <p>{e.description}</p>
+            <p>{getDescription(e, currentLanguage)}</p>
           </li>
         ))
       }

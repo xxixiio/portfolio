@@ -8,16 +8,27 @@ const projects = [
     url: "https://white-noise.vercel.app/",
     image: "white---noise.jpg",
     github: "https://github.com/xxixiio/white---noise",
+    translation: {
+      es: {
+        description:
+          "Buscar álbumes y artistas. Ver la lista de canciones y reproducir algunas vistas previas. Utilizado API de Spotify.",
+      },
+    },
   },
   {
     name: "Waves Festival",
-    description:
-      "Concept webpage for a music festival. Made with Astro.",
+    description: "Concept webpage for a music festival. Made with Astro.",
     state: 2,
     built_with: ["Astro", "Web"],
     url: "https://xxixiio.github.io/waves-festival/",
     image: "waves-festival.jpg",
     github: "https://github.com/xxixiio/waves-festival",
+    translation: {
+      es: {
+        description:
+          "Página web conceptual para un festival de música. Hecha con Astro.",
+      },
+    },
   },
   {
     name: "Agency landing page",
@@ -28,6 +39,12 @@ const projects = [
     url: "https://xxixiio.github.io/frontend-mentor-agency-lp/",
     image: "agency-lp.jpg",
     github: "https://github.com/xxixiio/frontend-mentor-agency-lp ",
+    translation: {
+      es: {
+        description:
+          "Desafío de Frontend Mentor. Página de aterrizaje para una agencia hecha sin frameworks ni bibliotecas.",
+      },
+    },
   },
   {
     name: "Kuma",
@@ -38,16 +55,27 @@ const projects = [
     url: null,
     image: "kuma.jpg",
     github: "https://github.com/xxixiio/kuma",
+    translation: {
+      es: {
+        description:
+          "Bot verificado de Discord. Bot multipropósito que incluye comandos de diversión, interacción, administración y más. Se dejó de dar soporte en junio de 2023.",
+      },
+    },
   },
   {
     name: "wtxted",
-    description:
-      "Terminal based text editor for Unix-like systems.",
+    description: "Terminal based text editor for Unix-like systems.",
     state: 1,
     built_with: ["Rust"],
     url: null,
     image: "wtxted.jpg",
     github: "https://github.com/xxixiio/wtxted",
+    translation: {
+      es: {
+        description:
+          "Editor de texto basado en terminal para sistemas tipo Unix.",
+      },
+    },
   },
 ];
 

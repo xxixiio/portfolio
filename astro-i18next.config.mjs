@@ -6,7 +6,6 @@ export default {
   defaultLocale: "en",
   locales: ["en", "es"],
   i18nextServer: {
-    debug: true,
     backend: {
       loadPath: "./public/locales/{{lng}}/{{ns}}.json",
     },
@@ -25,8 +24,5 @@ export default {
     initImmediate: false,
     preload: true,
     backend: null,
-  },
-  i18nextClient: {
-    debug: true,
   },
 };
