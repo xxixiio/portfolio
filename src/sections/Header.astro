@@ -1,19 +1,58 @@
 ---
 import { t } from "i18next"; 
 import { localizePath } from "astro-i18next";
+import LanguageSelector from "../components/LanguageSelector.astro";
+import MenuIcon from "../icons/hamburguer-menu.astro";
+import CloseIcon from "../icons/close.astro";
 ---
 
 <header class="header__container" id="header">
   <p>
-    <a href="/" class="header__title">seb</a>
+    <a href={localizePath("#")} class="header__title">seb</a>
   </p>
-  <ul class="header__list">
+  <MenuIcon class:list={"header__icon header__icon--menu"} id="header-menu-icon" />
+  <CloseIcon class:list={"header__icon header__icon--close"} id="header-close-icon" style="display: none;" />
+  <ul class="header__list" id="header-navbar">
     <li><a href={localizePath("#")} title="About me">{t("hero.title")}</a></li>
     <li><a href={localizePath("#experience")} title="Experience">{t("experience.title")}</a></li>
     <li><a href={localizePath("#projects")} title="Projects">{t("projects.title")}</a></li>
     <li><a href={localizePath("#contact")} title="Contact">{t("contact.title")}</a></li>
+    <li><LanguageSelector /></li>
   </ul>
 </header>
+
+<script>
+  const $menuIcon = document.getElementById("header-menu-icon");
+  const $closeIcon = document.getElementById("header-close-icon");
+  const $navbar = document.getElementById("header-navbar");
+
+  const toggleMenu = (event) => {
+    event.stopPropagation();
+    $navbar.classList.toggle("header__list--show");
+    $menuIcon.style.display = $menuIcon.style.display === 'none' ? 'inline' : 'none';
+    $closeIcon.style.display = $closeIcon.style.display === 'none' ? 'inline' : 'none';
+  };
+
+  $menuIcon.addEventListener("click", toggleMenu);
+  $closeIcon.addEventListener("click", toggleMenu);
+
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
+    if (!target.closest("#header-navbar") && $navbar.classList.contains("header__list--show")) {
+      $navbar.classList.remove("header__list--show");
+      $menuIcon.style.display = 'inline';
+      $closeIcon.style.display = 'none';
+    }
+  });
+
+  window.addEventListener("scroll", () => {
+    if ($navbar.classList.contains("header__list--show")) {
+      $navbar.classList.remove("header__list--show");
+      $menuIcon.style.display = 'inline';
+      $closeIcon.style.display = 'none';
+    }
+  });
+</script>
 
 <style>
   .header__container {
@@ -24,7 +63,7 @@ import { localizePath } from "astro-i18next";
     padding: 12px 16px;
     border-radius: 20px;
     margin-top: 15px;
-    overflow: auto;
+    align-items: center;
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
     position: sticky;
@@ -46,6 +85,7 @@ import { localizePath } from "astro-i18next";
   .header__list {
     display: flex;
     gap: 15px;
+    align-items: center;
   }
 
   .header__title,
@@ -58,10 +98,47 @@ import { localizePath } from "astro-i18next";
     text-decoration: underline;
   }
 
-  @media only screen and (max-width: 400px) {
-    .header__title,
+  .header__icon {
+    display: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .header__list {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #131313af;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      flex-direction: column;
+      align-items: center;
+      z-index: 500;
+      padding: 20px 0;
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transform: translateY(-700px);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .header__list--show {
+      transform: translateY(0%);
+    }
+
     .header__list > li > a {
-      font-size: 12px;
+      font-size: 18px;
+      padding: 12px 0;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .header__icon {
+      display: inline;
     }
   }
 </style>
