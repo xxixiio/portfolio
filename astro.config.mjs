@@ -25,5 +25,6 @@ export default defineConfig({
   output: "server",
   adapter: vercel({
     webAnalytics: { enabled: true },
+    includeFiles: ["./public/locales/en/translation.json", "./public/locales/es/translation.json"],
   }),
 });
