@@ -3,8 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "dev:host": "astro dev --host",
+    "dev": "tinacms dev -c \"astro dev\"",
+    "dev:host": "tinacms dev -c \"astro dev --host\"",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -23,9 +23,12 @@
     "dotenv": "^16.4.5",
     "kbar": "^0.1.0-beta.45",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tinacms": "^1.6.4"
   },
   "devDependencies": {
+    "@tinacms/cli": "^1.5.46",
+    "@types/node": "^20.14.9",
     "querystring": "^0.2.1"
   }
 }
