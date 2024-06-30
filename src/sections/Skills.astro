@@ -1,10 +1,11 @@
 ---
+import { t } from "i18next";
 import skills from "../consts/skills.js";
 import Skill from "../components/Skill.astro";
 ---
 
 <section>
-  <h2>Skills</h2>
+  <h2>{t("skills.title")}</h2>
   <div class="skills__items">
     {
       skills.map((s, i) => (

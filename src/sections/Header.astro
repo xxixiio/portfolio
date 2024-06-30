@@ -1,4 +1,5 @@
 ---
+import { t } from "i18next"; 
 import { localizePath } from "astro-i18next";
 ---
 
@@ -7,10 +8,10 @@ import { localizePath } from "astro-i18next";
     <a href="/" class="header__title">seb</a>
   </p>
   <ul class="header__list">
-    <li><a href={localizePath("#")} title="About me">About me</a></li>
-    <li><a href={localizePath("#experience")} title="Experience">Experience</a></li>
-    <li><a href={localizePath("#projects")} title="Projects">Projects</a></li>
-    <li><a href={localizePath("#contact")} title="Contact">Contact</a></li>
+    <li><a href={localizePath("#")} title="About me">{t("hero.title")}</a></li>
+    <li><a href={localizePath("#experience")} title="Experience">{t("experience.title")}</a></li>
+    <li><a href={localizePath("#projects")} title="Projects">{t("projects.title")}</a></li>
+    <li><a href={localizePath("#contact")} title="Contact">{t("contact.title")}</a></li>
   </ul>
 </header>
 

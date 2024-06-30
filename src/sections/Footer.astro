@@ -1,7 +1,12 @@
+---
+import { Trans } from "astro-i18next/components";
+---
+
 <footer class="footer__container">
   <div class="footer__content">
     <div class="footer__left">
-      Made with <a
+      <Trans i18nKey="footer">
+        Made with <a
         href="https://astro.build/"
         target="_blank"
         class="footer__link">Astro</a
@@ -10,6 +15,7 @@
         target="_blank"
         class="footer__link">Vercel</a
       > .
+      </Trans>
     </div>
     <div class="footer__right">©2024 | @xxixiio</div>
   </div>

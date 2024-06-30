@@ -1,6 +1,12 @@
+---
+import { Trans } from "astro-i18next/components";
+---
+
 <button id="shortcut-menu" class="hero__menu-text">
-  Press <span class="key">⌘</span> + <span class="key">K</span> to open the command
-  menu 🠖
+  <Trans i18nKey="shortcutMenuMessage">
+    Press <span class="key">⌘</span> + <span class="key">K</span> to open the command
+    menu 🠖
+  </Trans>
 </button>
 
 <script>

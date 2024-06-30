@@ -1,5 +1,40 @@
 {
-  "aboutme1": "I am a <0>Front-end Developer</0> currently a student specializing in microcomputer systems and networks, based in Spain.",
-  "aboutme2": "As an avid learner, I constantly seek opportunities to grow and explore new challenges. I love experimenting with new techniques and coding on personal projects, which helps me refine my skills and discover my unique style while making a real impact with the products I work with.",
-  "aboutme3": "In this portfolio, <0>you can find samples of my recent works and the skills I am developing.</0> To me, every project here is a step toward mastering my craft, so I hope it is not only objectively great but that passion is shown in the final piece."
+  "hero": {
+    "title": "About me",
+    "aboutme1": "I am a <0>Front-end Developer</0> currently a student specializing in microcomputer systems and networks, based in Spain.",
+    "aboutme2": "As an avid learner, I constantly seek opportunities to grow and explore new challenges. I love experimenting with new techniques and coding on personal projects, which helps me refine my skills and discover my unique style while making a real impact with the products I work with.",
+    "aboutme3": "In this portfolio, <0>you can find samples of my recent works and the skills I am developing.</0> To me, every project here is a step toward mastering my craft, so I hope it is not only objectively great but that passion is shown in the final piece.",
+    "projectsText": "Take a look into",
+    "projectsButton": "my projects",
+    "contactText": "Let's talk,",
+    "contactButton": "contact me"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "experience": {
+    "title": "Experience",
+    "as": "as"
+  },
+  "projects": {
+    "title": "Projects",
+    "repositoryButton": "Repositiory",
+    "websiteButton": "Website",
+    "states": {
+        "building": "Building",
+        "finished": "Finished",
+        "inProduction": "In Production",
+        "down": "Down"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "text1": "Want to work with me? Or just say hi?",
+    "text2": "Reach me via",
+    "toCopy": "Click to copy",
+    "copied": "Copied",
+    "copyError": "Failed to copy"
+  },
+  "footer": "Made with <0>Astro</0>, deployed with <1>Vercel</1> .",
+  "shortcutMenuMessage": "Press <0>⌘</0> + <1>K</1> to open the command menu 🠖"
 }

@@ -1,4 +1,5 @@
 ---
+import { t } from "i18next";
 import Tooltip from "./Tooltip.astro";
 
 interface Props {
@@ -8,10 +9,10 @@ interface Props {
 const { state } = Astro.props;
 
 const stateSelector = {
-  0: ["🔨 Building", "#f7ae73"],
-  1: ["🟢 Finished", "#4efd66"],
-  2: ["💻 In Production", "#4efd66"],
-  3: ["🔴 Down", "#fd3838"]
+  0: [`🔨 ${t("projects.states.building")}`, "#f7ae73"],
+  1: [`🟢 ${t("projects.states.finished")}`, "#4efd66"],
+  2: [`💻 ${t("projects.states.inProduction")}`, "#4efd66"],
+  3: [`🔴 ${t("projects.states.down")}`, "#fd3838"]
 };
 
 const tooltipMessage = stateSelector[state as number][0];

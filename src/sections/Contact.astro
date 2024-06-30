@@ -1,15 +1,16 @@
 ---
+import { t } from "i18next"; 
 import LinkAnchor from "../components/LinkAnchor.astro";
 import Tooltip from "../components/Tooltip.astro";
 import EmailIcon from "../icons/email.astro";
 ---
 
 <section class="contact__container">
-  <h2 id="contact">Contact</h2>
+  <h2 id="contact">{t("contact.title")}</h2>
   <p>
-    Want to work with me? Or just say hi?
+    {t("contact.text1")}
     <br>
-    Reach me via <LinkAnchor
+    {t("contact.text2")} <LinkAnchor
       to="mailto:hi@sebjf.dev"
       content="E-mail"
     />!

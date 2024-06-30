@@ -1,10 +1,11 @@
 ---
+import { t } from "i18next";
 import Project from "../components/Project.astro";
 import projects from "../consts/projects";
 ---
 
 <section>
-  <h2 id="projects">Projects</h2>
+  <h2 id="projects">{t("projects.title")}</h2>
   <div class="projects__content">
     {projects.map((projectData) => <Project projectData={projectData} />)}
   </div>

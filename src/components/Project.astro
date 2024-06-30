@@ -1,4 +1,5 @@
 ---
+import { t } from "i18next";
 import { Image } from "astro:assets";
 import Button from "./Button.astro";
 import ProjectState from "./ProjectState.astro";
@@ -48,7 +49,7 @@ const { projectData } = Astro.props;
     </p>
     <div class="project__links">
       <Button
-        content="Repository"
+        content={t("projects.repositoryButton")}
         as="a"
         href={projectData.github}
         target="__blank"
@@ -58,7 +59,7 @@ const { projectData } = Astro.props;
       {
         projectData.url ? (
           <Button
-            content="Website"
+            content={t("projects.websiteButton")}
             as="a"
             href={projectData.url}
             target="__blank"

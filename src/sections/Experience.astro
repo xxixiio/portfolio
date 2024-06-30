@@ -1,9 +1,10 @@
 ---
+import { t } from "i18next";
 import experience from "../consts/experience.js";
 ---
 
 <section>
-  <h2 id="experience">Experience</h2>
+  <h2 id="experience">{t("experience.title")}</h2>
   <div class="timeline__container">
     <ul class="timeline__list">
       {
@@ -13,7 +14,7 @@ import experience from "../consts/experience.js";
               <div class="timeline__title">
                 <h3 class="timeline__name secondary">{e.name}</h3>
                 <div>
-                  <span class="timeline__as">as</span>
+                  <span class="timeline__as">{t("experience.as")}</span>
                   <p class="timeline__position">{e.position}</p>
                 </div>
               </div>

@@ -1,5 +1,40 @@
 {
-  "aboutme1": "Soy un <0>Desarrollador Front-end</0> de España. Actualmente soy un estudiante especializandome en sistemas microinformáticos y redes.",
-  "aboutme2": "Busco constantemente oportunidades para crecer y explorar nuevos desafíos. Me encanta experimentar con nuevas técnicas y codificar en proyectos personales, lo que me ayuda a perfeccionar mis habilidades y descubrir mi estilo único mientras hago un impacto real con los productos con los que trabajo.",
-  "aboutme3": "En este portafolio, <0>puedes encontrar muestras de mis trabajos recientes y las habilidades que estoy desarrollando.</0> Para mí, cada proyecto aquí es un paso hacia el dominio de mi oficio, así que espero que no solo sea objetivamente excelente, sino que la pasión se refleje en la pieza final."
+  "hero": {
+    "title": "Sobre mí",
+    "aboutme1": "Soy un <0>Desarrollador Front-end</0> de España. Actualmente soy un estudiante especializandome en sistemas microinformáticos y redes.",
+    "aboutme2": "Busco constantemente oportunidades para crecer y explorar nuevos desafíos. Me encanta experimentar con nuevas técnicas y codificar en proyectos personales, lo que me ayuda a perfeccionar mis habilidades y descubrir mi estilo único mientras hago un impacto real con los productos con los que trabajo.",
+    "aboutme3": "En este portafolio, <0>puedes encontrar muestras de mis trabajos recientes y las habilidades que estoy desarrollando.</0> Para mí, cada proyecto aquí es un paso hacia el dominio de mi oficio, así que espero que no solo sea objetivamente excelente, sino que la pasión se refleje en la pieza final.",
+    "projectsText": "Mira",
+    "projectsButton": "mis proyectos",
+    "contactText": "Hablemos,",
+    "contactButton": "contáctame"
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "as": "como"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "repositoryButton": "Repositorio",
+    "websiteButton": "Web",
+    "states": {
+        "building": "Construyendo",
+        "finished": "Finalizado",
+        "inProduction": "En producción",
+        "down": "Caído / Sin soporte"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "text1": "¿Quieres trabajar conmigo? ¿O simplemente decir hola?",
+    "text2": "Háblame vía",
+    "toCopy": "Clica para copiar",
+    "copied": "Copiado",
+    "copyError": "Error al copiar"
+  },
+  "footer": "Hecho con <0>Astro</0>, desplegado con <1>Vercel</1> .",
+  "shortcutMenuMessage": "Presona <0>⌘</0> + <1>K</1> para abrir el menú de comandos 🠖"
 }
