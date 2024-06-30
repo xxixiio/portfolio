@@ -34,10 +34,12 @@ const { projectData } = Astro.props;
   </div>
   <div class="project__content">
     <div class="project__info">
-      <h3 class="project__title">
-        {projectData.name}
+      <div class="project__main">
+        <h3 class="project__title">
+          {projectData.name}
+        </h3>
         <ProjectState state={projectData.state} />
-      </h3>
+      </div>
       <p class="project__description">{projectData.description}</p>
     </div>
     <p class="project__used">
@@ -103,6 +105,9 @@ const { projectData } = Astro.props;
 
   .project__title {
     margin: 0;
+  }
+
+  .project__main {
     display: flex;
     flex-direction: row;
     align-items: center;
