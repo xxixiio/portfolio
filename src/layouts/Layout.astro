@@ -119,6 +119,12 @@ const { title, description } = Astro.props;
         outline: inherit;
       }
 
+      textarea, input, select, option {
+        all: unset;
+        outline: none;
+        -webkit-appearance: none;
+      }
+
       section {
         margin: 60px 0;
 

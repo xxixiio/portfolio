@@ -1,0 +1,96 @@
+---
+import { localizePath } from "astro-i18next";
+import LanguageIcon from "../icons/language.astro";
+import ArrowDown from "../icons/arrow-down.astro";
+
+const { pathname } = Astro.url;
+---
+<div class="lang__container">
+    <div class="lang__button" id="lang-button">
+        <LanguageIcon class:list={"lang__icon"}/>
+        <ArrowDown />
+    </div>
+    <ul class:list={"lang__options"} id="lang-menu">
+        <li>
+            <a href={localizePath(pathname, "en")}>English</a>
+            <a href={localizePath(pathname, "es")}>Español</a>
+        </li>
+    </ul>
+</div>
+
+<style>
+.lang__container {
+    position: relative;
+}
+
+.lang__button {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    border-radius: 6px;
+    transition: background .2s ease-in-out;
+    cursor: pointer;
+}
+
+.lang__button:hover {
+    background-color: #ffffff1a;
+}
+
+.lang__options {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: -40px;
+    background-color: #141414;
+    border: 1px solid #cccccc3d;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    padding: 8px 0;
+    min-width: 120px;
+    display: none;
+    z-index: 1000;
+}
+
+.lang__options.lang__show {
+    display: block;
+}
+
+.lang__options a {
+    display: block;
+    color: #ffffff;
+    text-dergb(255, 255, 255)tion: none;
+    padding: 8px 16px;
+    transition: background .2s ease-in-out;
+}
+
+.lang__options a:hover {
+    background-color: #31313171;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let button = document.getElementById("lang-button");
+    let menu = document.getElementById("lang-menu");
+
+    button.addEventListener("click", (e) => {
+        e.stopPropagation(); 
+        menu.classList.toggle("lang__show");
+    });
+
+    
+    document.addEventListener("click", (e) => {
+    if (!menu.contains(e.target as Node) && e.target !== button) {
+        menu.classList.remove("lang__show");
+        }
+    });
+
+    
+    window.addEventListener("scroll", () => {
+        if (menu.classList.contains("lang__show")) {
+            menu.classList.remove("lang__show");
+        }
+    });
+});
+
+</script>
