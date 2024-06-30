@@ -1,12 +1,16 @@
+---
+import { localizePath } from "astro-i18next";
+---
+
 <header class="header__container" id="header">
   <p>
     <a href="/" class="header__title">seb</a>
   </p>
   <ul class="header__list">
-    <li><a href="#" title="About me">About me</a></li>
-    <li><a href="#experience" title="Experience">Experience</a></li>
-    <li><a href="#projects" title="Projects">Projects</a></li>
-    <li><a href="#contact" title="Contact">Contact</a></li>
+    <li><a href={localizePath("#")} title="About me">About me</a></li>
+    <li><a href={localizePath("#experience")} title="Experience">Experience</a></li>
+    <li><a href={localizePath("#projects")} title="Projects">Projects</a></li>
+    <li><a href={localizePath("#contact")} title="Contact">Contact</a></li>
   </ul>
 </header>
 

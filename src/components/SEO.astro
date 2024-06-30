@@ -1,4 +1,6 @@
 ---
+import { HeadHrefLangs } from "astro-i18next/components";
+
 interface Props {
   title: string;
   description: string;
@@ -30,3 +32,5 @@ const { title, description } = Astro.props;
 <meta name="googlebot" content="index, follow" />
 
 <link rel="canonical" href="https://www.sebjf.dev" />
+
+<HeadHrefLangs />

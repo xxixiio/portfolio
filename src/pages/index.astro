@@ -1,4 +1,5 @@
 ---
+import { changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro";
 import AboutMe from "../sections/AboutMe.astro";
 import Header from "../sections/Header.astro";
@@ -8,6 +9,8 @@ import Experience from "../sections/Experience.astro";
 import Projects from "../sections/Projects.astro";
 import Contact from "../sections/Contact.astro";
 import Bento from "../sections/Bento.astro";
+
+changeLanguage("en");
 ---
 
 <Layout title="Seb's portfolio | Web developer" description="Welcome to my personal portfolio, where I showcase my latest projects and creations.">

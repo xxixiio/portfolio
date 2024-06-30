@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { Trans } from "astro-i18next/components";
 import LinkAnchor from "../components/LinkAnchor.astro";
 import GithubIcon from "../icons/github.astro";
 import ShortcutMenu from "../components/ShortcutMenu.astro";
@@ -33,7 +34,9 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
   </div>
   <h2 class="hero__hey accent"><span class="wave">👋</span> Hey! ——</h2>
   <p>
-    I am a <span class="highlight">Front-end Developer</span> currently a student specializing in microcomputer systems and networks, based in Spain.
+    <Trans i18nKey="hero.aboutme1">
+      I am a <span class="highlight">Front-end Developer</span> currently a student specializing in microcomputer systems and networks, based in Spain.
+    </Trans>
     <br />
     <br />
     As an avid learner, I constantly seek opportunities to grow and explore new challenges.

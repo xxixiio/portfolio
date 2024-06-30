@@ -1,7 +1,8 @@
 ---
 import "../styles/normalize.css";
 import SEO from "../components/SEO.astro";
-import CommandMenu from "../components/CommandMenu"
+import CommandMenu from "../components/CommandMenu";
+import i18next from "i18next";
 
 interface Props {
   title: string;
@@ -12,7 +13,7 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={i18next.language}>
   <head>
     <SEO title={title} description={description} />
   </head>
