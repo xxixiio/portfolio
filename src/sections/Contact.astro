@@ -63,6 +63,10 @@ import EmailIcon from "../icons/email.astro";
 
   .contact__main {
     display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 100px;
+    gap: 50px;
   }
 
   .contact__email {
@@ -83,15 +87,12 @@ import EmailIcon from "../icons/email.astro";
   }
 
   .contact__text-container {
-    flex: 0 0 60%;
-
     & > p {
       margin: 0;
     }
   }
 
   .contact__links {
-    flex: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
