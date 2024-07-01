@@ -1,5 +1,6 @@
 ---
-import { t } from "i18next"; 
+import { t } from "i18next";
+import { Trans } from "astro-i18next/components";
 import LinkAnchor from "../components/LinkAnchor.astro";
 import Tooltip from "../components/Tooltip.astro";
 import EmailIcon from "../icons/email.astro";
@@ -7,20 +8,29 @@ import EmailIcon from "../icons/email.astro";
 
 <section class="contact__container">
   <h2 id="contact">{t("contact.title")}</h2>
-  <p>
-    {t("contact.text1")}
-    <br>
-    {t("contact.text2")} <LinkAnchor
-      to="mailto:hi@sebjf.dev"
-      content="E-mail"
-    />!
-  </p>
-  <Tooltip content={"Click to copy"} id="email-tooltip">
-    <button class="contact__email" id="email-button">
-      <EmailIcon class:list={"contact__email-icon"} />
-      hi@sebjf.dev
-    </button>
-  </Tooltip>
+  <div class="contact__main">
+    <div class="contact__text-container">
+      <p>
+        {t("contact.text1")}
+        <br>
+        <br>
+        {t("contact.text2")} 
+        <LinkAnchor to="mailto:hi@sebjf.dev" content="email" /> 
+        {t("contact.text3")} 
+        <LinkAnchor to="https://www.linkedin.com/in/sebastian-jamito-b386822b7/" content="LinkedIn" /> 
+        {t("contact.text4")} 
+      </p>
+    </div>
+    <div class="contact__links">
+      <Tooltip content={"Click to copy"} id="email-tooltip">
+        <button class="contact__email" id="email-button">
+          <EmailIcon class:list={"contact__email-icon"} />
+          hi@sebjf.dev
+        </button>
+      </Tooltip>
+      <LinkAnchor to="https://www.linkedin.com/in/sebastian-jamito-b386822b7/" content="LinkedIn" />
+    </div>
+  </div>
 </section>
 
 <script>
@@ -51,8 +61,8 @@ import EmailIcon from "../icons/email.astro";
     font-size: 35px;
   }
 
-  .contact__container {
-    text-align: center;
+  .contact__main {
+    display: flex;
   }
 
   .contact__email {
@@ -70,6 +80,23 @@ import EmailIcon from "../icons/email.astro";
     &:hover {
         background-color: var(--hover-gray);
     }
+  }
+
+  .contact__text-container {
+    flex: 0 0 60%;
+
+    & > p {
+      margin: 0;
+    }
+  }
+
+  .contact__links {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .contact__email-icon {

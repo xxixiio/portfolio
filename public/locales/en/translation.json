@@ -29,8 +29,10 @@
   },
   "contact": {
     "title": "Contact",
-    "text1": "Want to work with me? Or just say hi?",
-    "text2": "Reach me via",
+    "text1": "Thank you for visiting my portfolio! Whether you have a project idea, a question, or just want to chat, feel free to get in touch.",
+    "text2": "You can reach out via",
+    "text3": "if you'd like to connect. Additionally, I'm available on",
+    "text4": "if that's more convenient for you.",
     "toCopy": "Click to copy",
     "copied": "Copied",
     "copyError": "Failed to copy"

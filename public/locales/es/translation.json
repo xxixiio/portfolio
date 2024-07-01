@@ -29,8 +29,10 @@
   },
   "contact": {
     "title": "Contacto",
-    "text1": "¿Quieres trabajar conmigo? ¿O simplemente decir hola?",
-    "text2": "¡Háblame vía",
+    "text1": "¡Gracias por visitar mi portafolio! Si tienes una idea de proyecto, una pregunta o simplemente deseas conversar, no dudes en ponerte en contacto.",
+    "text2": "Puedes comunicarte a través de",
+    "text3": "si deseas conectarte. Además, estoy disponible en",
+    "text4": "si te resulta más conveniente.",
     "toCopy": "Clica para copiar",
     "copied": "Copiado",
     "copyError": "Error al copiar"
