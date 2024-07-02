@@ -5,7 +5,7 @@ const menuActions = [
     shortcut: ["s", "a"],
     keywords: "me",
     section: "navigation",
-    perform: () => (window.location.href = "/#"),
+    perform: () => (window.location.href = localizePath(window.location.pathname, "/#")),
   },
   {
     id: "experience",
@@ -13,7 +13,7 @@ const menuActions = [
     shortcut: ["s", "e"],
     keywords: "xp",
     section: "navigation",
-    perform: () => (window.location.href = "/#experience"),
+    perform: () => (window.location.href = localizePath(window.location.pathname, "/#experience")),
   },
   {
     id: "projects",
@@ -21,7 +21,7 @@ const menuActions = [
     shortcut: ["s", "p"],
     keywords: "works",
     section: "navigation",
-    perform: () => (window.location.href = "/#projects"),
+    perform: () => (window.location.href = localizePath(window.location.pathname, "/#projects")),
   },
   {
     id: "contact",
@@ -29,7 +29,7 @@ const menuActions = [
     shortcut: ["s", "c"],
     keywords: "email hi hello",
     section: "contact",
-    perform: () => (window.location.href = "/#contact"),
+    perform: () => (window.location.href = localizePath(window.location.pathname, "/#contact")),
   },
   {
     id: "email",
@@ -47,6 +47,21 @@ const menuActions = [
     section: "links",
     perform: () => window.open("https://github.com/xxixiio/", "_blank"),
   },
+  {
+    id: "cv",
+    name: "CV",
+    shortcut: ["c", "v"],
+    keywords: "curriculum vitae",
+    section: "links",
+    perform: () => (window.location.href = "/cv"),
+  },
 ];
 
 export default menuActions;
+
+function localizePath(pathname, destination) {
+  const paths = pathname.split("/").filter(Boolean);
+  const locale = paths.length > 0 && paths[0].length == 2 ? paths[0] : "";
+
+  return `${locale.length > 0 ? "/" + locale : ""}${destination}`;
+}
