@@ -7,7 +7,8 @@
     "projectsText": "Take a look into",
     "projectsButton": "my projects",
     "contactText": "Let's talk,",
-    "contactButton": "contact me"
+    "contactButton": "contact me",
+    "availableForWork": "Available for work"
   },
   "skills": {
     "title": "Skills"

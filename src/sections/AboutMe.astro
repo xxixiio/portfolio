@@ -23,7 +23,8 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
     />
     <div>
       <h1 class="hero__name accent">seb</h1>
-      <p class="hero__username">@xxixiio</p>
+      <!-- <p class="hero__username">@xxixiio</p> -->
+      <a class="hero__undername" href="#contact"><span class="pulse_dot"></span> {t("hero.availableForWork")}</a>
     </div>
   </div>
   <h2 class="hero__hey accent"><span class="wave">👋</span> Hey! ——</h2>
@@ -183,5 +184,31 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
   .hero__hey {
     font-size: 28px;
     margin-bottom: -8px;
+  }
+
+  .hero__undername {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #c5e0ae;
+    gap: 12px;
+  }
+
+  .pulse_dot {
+    height: 8px;
+    width: 8px;
+    display:block;
+    border-radius:50%;
+    background-color:#62bd19;
+    animation:pulse 1500ms infinite;
+  }
+
+  @keyframes pulse {
+    0%{
+      box-shadow:#62bd19 0 0 0 0;
+    }
+    75%{
+      box-shadow:#ff69b400 0 0 0 6px;
+    }
   }
 </style>
