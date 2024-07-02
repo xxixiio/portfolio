@@ -4,6 +4,8 @@ import { t } from "i18next";
 import { Trans } from "astro-i18next/components";
 import LinkAnchor from "../components/LinkAnchor.astro";
 import GithubIcon from "../icons/github.astro";
+import LinkedinIcon from "../icons/linkedin.astro";
+import CvIcon from "../icons/cv.astro";
 import ShortcutMenu from "../components/ShortcutMenu.astro";
 ---
 
@@ -20,18 +22,43 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
     />
     <div>
       <h1 class="hero__name accent">seb</h1>
-      <a
-        class="hero__username"
+      <p class="hero__username">@xxixiio</p>
+    </div>
+  </div>
+  <div class="hero__links">
+    <a
+        class="hero__link"
         href="https://github.com/xxixiio/"
-        title="xxixiio's Github page"
+        title="seb's Github page"
         target="__blank"
       >
-        <span class="hero__github">
+        <span class="hero__link_icon">
           <GithubIcon />
         </span>
-        @xxixiio
+        Github
       </a>
-    </div>
+      <a
+        class="hero__link"
+        href="https://www.linkedin.com/in/sebastian-j-ferolina-b386822b7/"
+        title="seb's Linkedin page"
+        target="__blank"
+      >
+        <span class="hero__link_icon">
+          <LinkedinIcon />
+        </span>
+        LinkedIn
+      </a>
+      <a
+        class="hero__link"
+        href="/cv"
+        title="seb's cv"
+        target="__blank"
+      >
+        <span class="hero__link_icon">
+          <CvIcon />
+        </span>
+        CV
+      </a>
   </div>
   <h2 class="hero__hey accent"><span class="wave">👋</span> Hey! ——</h2>
   <p>
@@ -106,6 +133,7 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
     height: 200px;
     align-items: center;
     gap: 35px;
+    margin-bottom: -25px;
   }
 
   .hero__avatar {
@@ -127,9 +155,28 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
     color: var(--grey);
   }
 
-  .hero__github {
+  .hero__link {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 8px;
+    margin-top: 3px;
+    color: #fff;
+
+    &:hover {
+      text-decoration: underline
+    }
+  }
+
+  .hero__link_icon {
     line-height: 1;
     filter: invert(1);
+  }
+
+  .hero__links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
   }
 
   .hero__hey {
