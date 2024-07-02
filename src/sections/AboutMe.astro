@@ -25,6 +25,35 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
       <p class="hero__username">@xxixiio</p>
     </div>
   </div>
+  <h2 class="hero__hey accent"><span class="wave">👋</span> Hey! ——</h2>
+  <p>
+    <Trans i18nKey="hero.aboutme1">
+      I am a <span class="highlight">Front-end Developer</span> currently a student specializing in microcomputer systems and networks, based in Spain.
+    </Trans>
+    <br />
+    <br />
+    <Trans i18nKey="hero.aboutme2">
+      As an avid learner, I constantly seek opportunities to grow and explore new challenges.
+      I love experimenting with new techniques and coding on personal projects, which
+      helps me refine my skills and discover my unique style while making a real impact
+      with the products I work with.
+    </Trans>
+    <br />
+    <br />
+    <Trans i18nKey="hero.aboutme3">
+      In this portfolio, <span class="highlight">you can find samples of my recent works and the skills I am
+      developing.</span> To me, every project here is a step toward mastering my craft, so
+      I hope it is not only objectively great but that passion is shown in the final
+      piece.
+    </Trans>
+    <br />
+    <br />
+    {t("hero.projectsText")} 
+    <LinkAnchor content={t("hero.projectsButton")} to="#projects" />.
+    <br />
+    {t("hero.contactText")} 
+    <LinkAnchor content={t("hero.contactButton")} to="#contact" />!
+  </p>
   <div class="hero__links">
     <a
         class="hero__link"
@@ -60,35 +89,6 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
         CV
       </a>
   </div>
-  <h2 class="hero__hey accent"><span class="wave">👋</span> Hey! ——</h2>
-  <p>
-    <Trans i18nKey="hero.aboutme1">
-      I am a <span class="highlight">Front-end Developer</span> currently a student specializing in microcomputer systems and networks, based in Spain.
-    </Trans>
-    <br />
-    <br />
-    <Trans i18nKey="hero.aboutme2">
-      As an avid learner, I constantly seek opportunities to grow and explore new challenges.
-      I love experimenting with new techniques and coding on personal projects, which
-      helps me refine my skills and discover my unique style while making a real impact
-      with the products I work with.
-    </Trans>
-    <br />
-    <br />
-    <Trans i18nKey="hero.aboutme3">
-      In this portfolio, <span class="highlight">you can find samples of my recent works and the skills I am
-      developing.</span> To me, every project here is a step toward mastering my craft, so
-      I hope it is not only objectively great but that passion is shown in the final
-      piece.
-    </Trans>
-    <br />
-    <br />
-    {t("hero.projectsText")} 
-    <LinkAnchor content={t("hero.projectsButton")} to="#projects" />.
-    <br />
-    {t("hero.contactText")} 
-    <LinkAnchor content={t("hero.contactButton")} to="#contact" />!
-  </p>
   <ShortcutMenu />
 </section>
 
@@ -176,6 +176,7 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
     display: flex;
     justify-content: center;
     gap: 40px;
+    margin-top: 50px;
   }
 
   .hero__hey {
