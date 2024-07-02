@@ -40,6 +40,14 @@ const menuActions = [
     perform: () => window.open("mailto:hi@sebjf.dev", "_blank"),
   },
   {
+    id: "linkedin",
+    name: "LinkedIn",
+    shortcut: ["l", "i"],
+    keywords: "contact li",
+    section: "contact",
+    perform: () => window.open("https://www.linkedin.com/in/sebastian-j-ferolina-b386822b7/", "_blank"),
+  },
+  {
     id: "github",
     name: "Github",
     shortcut: ["g", "h"],
