@@ -38,5 +38,5 @@
     "copyError": "Error al copiar"
   },
   "footer": "Hecho con <0>Astro</0>, desplegado con <1>Vercel</1> .",
-  "shortcutMenuMessage": "Presona <0>⌘</0> + <1>K</1> para abrir el menú de comandos 🠖"
+  "shortcutMenuMessage": "Presiona <0>⌘</0> + <1>K</1> para abrir el menú de comandos 🠖"
 }
