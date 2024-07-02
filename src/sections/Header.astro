@@ -8,7 +8,9 @@ import CloseIcon from "../icons/close.astro";
 
 <header class="header__container" id="header">
   <p>
-    <a href={localizePath("#")} class="header__title">seb</a>
+    <a href={localizePath("#")} class="header__title">
+      <img class="header__logo" src="/img/logo/seb-white.png" alt="seb logo">
+    </a>
   </p>
   <MenuIcon class:list={"header__icon header__icon--menu"} id="header-menu-icon" />
   <CloseIcon class:list={"header__icon header__icon--close"} id="header-close-icon" style="display: none;" />
@@ -76,6 +78,11 @@ import CloseIcon from "../icons/close.astro";
     > * {
       margin: 0;
     }
+  }
+
+  .header__logo {
+    width: 32px;
+    display: block;
   }
 
   .header__hide {
