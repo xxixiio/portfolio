@@ -3,9 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "tinacms dev -c \"astro dev\"",
-    "dev:not": "astro dev",
-    "dev:host": "tinacms dev -c \"astro dev --host\"",
+    "dev": "astro dev",
+    "dev:host": "astro dev --host",
+    "dev:tina": "tinacms dev -c \"astro dev\"",
+    "dev:tinahost": "tinacms dev -c \"astro dev --host\"",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
