@@ -3,6 +3,9 @@ import { changeLanguage } from "i18next";
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../sections/Header.astro";
 import Footer from "../../sections/Footer.astro";
+import { slugify } from "../../utils/slugify";
+
+const posts = await Astro.glob('../../../content/**/*.mdx');
 
 changeLanguage("en");
 ---
@@ -11,6 +14,17 @@ changeLanguage("en");
   <Header />
   <main>
     <h1>Blog</h1>
+    {
+      posts.map((post) => (
+        <a href={"/blog/" + slugify(post.frontmatter.title)}>
+          <div>
+            <h2>{post.frontmatter.title}</h2>
+            <p>{post.frontmatter.description}</p>
+            <p>{post.frontmatter.posted}</p>
+          </div>
+        </a>
+      ))
+    }
   </main>
   <Footer />
 </Layout>

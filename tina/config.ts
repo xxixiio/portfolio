@@ -48,6 +48,12 @@ export default defineConfig({
             description: 'If this is checked the post will not be published',
           },
           {
+            type: "string",
+            name: "description",
+            label: "Short Description",
+            required: true,
+          },
+          {
             type: "datetime",
             name: "posted",
             label: "Date Posted",

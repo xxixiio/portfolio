@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import Header from "../../sections/Header.astro";
+import Footer from "../../sections/Footer.astro";
+import { slugify } from "../../utils/slugify";
+
+const posts = await Astro.glob('../../../content/**/*.mdx');
+console.log(posts[0].frontmatter)
+
+export async function getStaticPaths({ rss }) {
+	const posts = await Astro.glob('../../../content/**/*.mdx');
+
+	return posts.map((post) => {
+		return {
+			params: { post: slugify(post.frontmatter.title) },
+			props: { post }
+		};
+	})
+}
+
+const { post: { Content }, post } = Astro.props;
+export const prerender = true;
+---
+
+<Layout title={"postData.data.post.title" + " | Seb's portfolio"} description={"postData.data.post.description"}>
+    <Header />
+    <h1>{post.frontmatter.title}</h1>
+    <div>
+        <Content />
+    </div>
+    <Footer />
+</Layout>

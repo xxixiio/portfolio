@@ -4,27 +4,27 @@ import react from "@astrojs/react";
 import vercel from "@astrojs/vercel/serverless";
 import astroI18next from "astro-i18next";
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
   build: {
-    inlineStylesheets: "always",
+    inlineStylesheets: "always"
   },
   vite: {
     ssr: {
-      noExternal: ["path-to-regexp"],
-    },
+      noExternal: ["path-to-regexp"]
+    }
   },
   site: "https://sebjf.dev",
-  integrations: [
-    sitemap(),
-    astroI18next(),
-    react({
-      include: ["**/react/*"],
-    }),
-  ],
+  integrations: [sitemap(), astroI18next(), react({
+    include: ["**/react/*"]
+  }), mdx()],
   output: "server",
   adapter: vercel({
-    webAnalytics: { enabled: true },
-    includeFiles: ["./public/locales/en/translation.json", "./public/locales/es/translation.json"],
-  }),
+    webAnalytics: {
+      enabled: true
+    },
+    includeFiles: ["./public/locales/en/translation.json", "./public/locales/es/translation.json"]
+  })
 });
