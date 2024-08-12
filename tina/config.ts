@@ -54,6 +54,18 @@ export default defineConfig({
             required: true,
           },
           {
+            type: "string",
+            name: "category",
+            label: "Post Category",
+            required: false,
+          },
+          {
+            type: "string",
+            name: "tag",
+            label: "Post Tag",
+            required: false,
+          },
+          {
             type: "rich-text",
             name: "body",
             label: "Body",
