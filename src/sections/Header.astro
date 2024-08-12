@@ -66,8 +66,6 @@ import CloseIcon from "../icons/close.astro";
     border-radius: 20px;
     margin-top: 15px;
     align-items: center;
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
     position: sticky;
     top: 15px;
     z-index: 1000;
@@ -77,6 +75,19 @@ import CloseIcon from "../icons/close.astro";
 
     > * {
       margin: 0;
+    }
+
+    /* Quick Fix to Chrome Bug (#40835530). Backdrop doesn't work properly on nested elements. */
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: -1;
+      margin-left: -16px;
+      border-radius: 20px;
     }
   }
 
