@@ -27,14 +27,14 @@ export const getNowPlaying = async () => {
     }
 
     const song = await response.json();
-    const albumImageUrl = song.item.album.images[0].url;
+    const albumImageUrl = !song.item.is_local ? song.item.album.images[0].url : null;
     const artist = song.item.artists.map((artist) => artist.name).join(", ");
     const isPlaying = song.is_playing;
-    const songUrl = song.item.external_urls.spotify;
+    const songUrl = !song.item.is_local ? song.item.external_urls.spotify : null;
     const title = song.item.name;
     const timePlayed = song.progress_ms;
     const timeTotal = song.item.duration_ms;
-    const artistUrl = song.item.album.artists[0].external_urls.spotify;
+    const artistUrl = !song.item.is_local ? song.item.album.artists[0].external_urls.spotify : null;
 
     return {
       albumImageUrl,

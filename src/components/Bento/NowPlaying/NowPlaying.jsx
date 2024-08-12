@@ -13,12 +13,16 @@ function NowPlaying({ className }) {
       const response = await fetch("/api/get-now-playing");
       const data = await response.json();
 
-      let maxLength = 25;
+      const titleMaxLength = 25;
+      const artistsMaxLength = 50;
 
       if (data == "Currently Not Playing") {
       } else {
-        if (data && data.title.length > maxLength) {
-          data.title = data.title.slice(0, maxLength) + "...";
+        if (data && data.title.length > titleMaxLength) {
+          data.title = data.title.slice(0, titleMaxLength) + "...";
+        }
+        if (data && data.artist.length > artistsMaxLength) {
+          data.artist = data.artist.slice(0, artistsMaxLength) + "...";
         }
 
         setNowPlaying(data);
@@ -56,7 +60,7 @@ function NowPlaying({ className }) {
       {nowPlaying ? (
         <div>
           <img
-            src={nowPlaying.albumImageUrl}
+            src={nowPlaying.albumImageUrl || "/img/default-music-cover.webp"}
             alt={nowPlaying.title + " cover"}
             className="bento-spotify__image"
             ref={imgRef}
