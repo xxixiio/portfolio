@@ -1,15 +1,15 @@
 ---
 import { changeLanguage } from "i18next";
-import PostLayout from "../../layouts/PostLayout.astro";
-import Header from "../../sections/Header.astro";
-import Footer from "../../sections/Footer.astro";
-import { slugify } from "../../utils/slugify";
-import { formatDate } from "../../utils/formatDate";
+import PostLayout from "../../../layouts/PostLayout.astro";
+import Header from "../../../sections/Header.astro";
+import Footer from "../../../sections/Footer.astro";
+import { slugify } from "../../../utils/slugify";
+import { formatDate } from "../../../utils/formatDate";
 
-changeLanguage("en");
+changeLanguage("es");
 
 export async function getStaticPaths({ rss }) {
-    const posts = await Astro.glob("../../../content/**/*.mdx");
+    const posts = await Astro.glob("../../../../content/**/*.mdx");
     const publishedPosts = posts.filter(post => !post.frontmatter.draft);
     return publishedPosts.map((post) => {
         return {

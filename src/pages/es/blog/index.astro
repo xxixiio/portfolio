@@ -1,13 +1,13 @@
 ---
 import { changeLanguage } from "i18next";
-import Layout from "../../layouts/Layout.astro";
-import Header from "../../sections/Header.astro";
-import Footer from "../../sections/Footer.astro";
-import PostDisplay from "../../components/PostDisplay.astro";
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../sections/Header.astro";
+import Footer from "../../../sections/Footer.astro";
+import PostDisplay from "../../../components/PostDisplay.astro";
 
-changeLanguage("en");
+changeLanguage("es");
 
-const posts = await Astro.glob("../../../content/**/*.mdx");
+const posts = await Astro.glob("../../../../content/**/*.mdx");
 const publishedPosts = posts
     .filter(post => !post.frontmatter.draft)
     .sort((a, b) => {

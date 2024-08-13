@@ -19,7 +19,7 @@ import CloseIcon from "../icons/close.astro";
     <li><a href={localizePath("#experience")} title="Experience">{t("experience.title")}</a></li>
     <li><a href={localizePath("#projects")} title="Projects">{t("projects.title")}</a></li>
     <li><a href={localizePath("#contact")} title="Contact">{t("contact.title")}</a></li>
-    <!-- <li><a href={"/blog"} title="Blog">Blog</a></li> -->
+    <li><a href={localizePath("/blog")} title="Blog">Blog</a></li>
     <li><LanguageSelector /></li>
   </ul>
 </header>
@@ -58,6 +58,15 @@ import CloseIcon from "../icons/close.astro";
 </script>
 
 <style>
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
   .header__container {
     width: calc(100% - 32px);
     display: flex;
