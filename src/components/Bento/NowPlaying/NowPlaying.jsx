@@ -17,6 +17,8 @@ function NowPlaying({ className }) {
       const artistsMaxLength = 50;
 
       if (data == "Currently Not Playing") {
+        setBgColor("#1f1f1f80");
+        setNowPlaying(null);
       } else {
         if (data && data.title.length > titleMaxLength) {
           data.title = data.title.slice(0, titleMaxLength) + "...";
