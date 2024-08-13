@@ -1,12 +1,13 @@
 ---
 import { slugify } from "../utils/slugify";
 import { formatDate } from "../utils/formatDate";
+import { localizePath } from "astro-i18next";
 
 const { p } = Astro.props;
 ---
 
 <li class="post__container">
-  <a href={"/blog/" + slugify(p.frontmatter.title)} >
+  <a href={localizePath("/blog/" + slugify(p.frontmatter.title))} >
     <div class="post__info">
       <div>
         <h3 class="post__title">{p.frontmatter.title}</h3>
