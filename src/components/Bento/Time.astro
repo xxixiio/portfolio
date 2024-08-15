@@ -22,7 +22,7 @@ const { class: className, ...props } = Astro.props;
     </li>
     <li class="info__element info__time">
       <ClockIcon class:list={"info__icon"} />
-      <p id="time">00:00:00</p>
+      <p id="time">00:00</p>
     </li>
   </ul>
 </div>
@@ -103,7 +103,6 @@ const { class: className, ...props } = Astro.props;
     let options: Intl.DateTimeFormatOptions = {
       hour: "2-digit",
       minute: "2-digit",
-      second: "2-digit",
       hour12: false,
       timeZone: "Europe/Madrid",
     };

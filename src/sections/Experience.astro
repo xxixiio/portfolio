@@ -15,7 +15,7 @@ const currentLanguage = i18next.language;
     <ul class="timeline__list">
       {
         experience.map((e, i) => (
-          <li class="timeline__element">
+          <li class={"timeline__element" + (e.startDate == "Currently" ? " timeline__element--currently" : "")}>
             <div class="timeline__main">
               <div class="timeline__title">
                 <h3 class="timeline__name secondary">{e.name}</h3>
@@ -38,22 +38,17 @@ const currentLanguage = i18next.language;
 
 <style>
   .timeline__list {
-    border: 0 solid #ffffff41;
+    border: 0 solid #3a3a3a96;
     border-left-width: 1px;
-    padding-left: 40px
+    padding-left: 40px;
   }
 
   .timeline__element {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 18px 12px;
+    padding: 12px 12px;
     border-radius: 8px;
-    transition: background 0.1s ease-in-out;
-
-    &:hover {
-      background-color: var(--hover-gray);
-    }
 
     > p {
       margin: 0;
@@ -63,12 +58,16 @@ const currentLanguage = i18next.language;
   .timeline__element::before {
     content: "";
     position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: #ffffff;
+    width: 12px;
+    height: 12px;
+    background-color: #7a7a7a;
     border-radius: 50%;
-    margin-left: -60px;
+    margin-left: -58px;
     margin-top: 10px;
+  }
+
+  .timeline__element--currently::before {
+    background-color: #e4e4e4;
   }
 
   .timeline__main {
@@ -90,7 +89,6 @@ const currentLanguage = i18next.language;
   }
 
   .timeline__name {
-    font-size: 24px;
     margin: 0;
   }
 

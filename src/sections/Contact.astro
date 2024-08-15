@@ -7,7 +7,7 @@ import EmailIcon from "../icons/email.astro";
 ---
 
 <section class="contact__container">
-  <h2 id="contact">{t("contact.title")}</h2>
+  <h2 class="" id="contact">{t("contact.title")}</h2>
   <div class="contact__main">
     <div class="contact__text-container">
       <p>
@@ -32,6 +32,24 @@ import EmailIcon from "../icons/email.astro";
     </div>
   </div>
 </section>
+
+<script>
+  const startAnimation = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("shake-lr");
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(startAnimation);
+  const elements = document.querySelectorAll('#contact');
+  
+  elements.forEach(el => {
+    observer.observe(el);
+  });
+</script>
 
 <script>
   const emailButton = document.getElementById("email-button");

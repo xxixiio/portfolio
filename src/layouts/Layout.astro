@@ -1,5 +1,6 @@
 ---
 import "../styles/normalize.css";
+import "../styles/animations.css";
 import SEO from "../components/SEO.astro";
 import CommandMenu from "../components/CommandMenu";
 import i18next from "i18next";
@@ -26,9 +27,9 @@ const { title, description } = Astro.props;
         /* --text: #F4F0EF; */
         --text: #fff4db;
         --background: #0f0f0f;
-        --primary: #dd8b76;
-        --secondary: #7cd196;
-        --accent: #82cfcf;
+        --primary: #e79f8d;
+        --secondary: #7ee69d;
+        --accent: #9be4e4;
         --gray: #e6e6e6;
         --hover-gray: #1d1d1d;
 
@@ -142,12 +143,7 @@ const { title, description } = Astro.props;
         width: 100%;
         max-width: var(--max-w);
       }
-
-      pre {
-        padding: 20px 16px;
-        border-radius: 10px;
-      }
-
+      
       .primary {
         color: var(--primary);
       }
