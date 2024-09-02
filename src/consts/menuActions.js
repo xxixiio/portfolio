@@ -55,22 +55,6 @@ const menuActions = [
     section: "links",
     perform: () => window.open("https://github.com/xxixiio/", "_blank"),
   },
-  {
-    id: "cv-en",
-    name: "CV (English)",
-    shortcut: ["c", "v"],
-    keywords: "curriculum vitae",
-    section: "links",
-    perform: () => (window.location.href = "/cv"),
-  },
-  {
-    id: "cv-es",
-    name: "CV (Español)",
-    shortcut: ["e", "c", "v"],
-    keywords: "curriculum vitae",
-    section: "links",
-    perform: () => (window.location.href = "/es/cv"),
-  },
 ];
 
 export default menuActions;
