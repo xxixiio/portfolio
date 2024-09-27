@@ -37,7 +37,7 @@ const projects = [
     state: 2,
     built_with: ["Web"],
     url: "https://xxixiio.github.io/burguers-web/",
-    image: "fast-food.jpg",
+    image: "fast-food.png",
     github: "https://github.com/xxixiio/burguers-web",
     translation: {
       es: {
