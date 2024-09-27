@@ -31,18 +31,18 @@ const projects = [
     },
   },
   {
-    name: "Agency landing page",
+    name: "Fast Food Restaurant",
     description:
-      "Frontend Mentor challenge. Agency landing page made with no frameworks or libraries.",
+      "Fast food restaurant web page, done with no frameworks.",
     state: 2,
     built_with: ["Web"],
-    url: "https://xxixiio.github.io/frontend-mentor-agency-lp/",
+    url: "https://xxixiio.github.io/burguers-web/",
     image: "agency-lp.jpg",
-    github: "https://github.com/xxixiio/frontend-mentor-agency-lp ",
+    github: "https://github.com/xxixiio/burguers-web",
     translation: {
       es: {
         description:
-          "Desafío de Frontend Mentor. Página de aterrizaje para una agencia hecha sin frameworks ni bibliotecas.",
+          "Página web de restaurante de comida rápida, hecha sin ningun framework.",
       },
     },
   },

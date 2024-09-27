@@ -34,7 +34,7 @@ http://localhost:4321/admin/index.html
 - [astro-i18next](https://github.com/yassinedoghri/astro-i18next) - Multilanguage support.
 ## Scripts
 - `npm run dev` - Astro preview.
-- `npm run dev:host` - Astro preview + Run TinaCMS server + host.
+- `npm run dev:host` - Astro preview + host.
 - `npm run dev:tina` - Astro preview + Run TinaCMS server.
 - `npm run dev:tinahost` - Astro preview + Run TinaCMS server + host.
 - `npm run i18next` - Generate i18next files.

@@ -54,7 +54,7 @@ function NowPlaying({ className }) {
 
   return (
     <a
-      href={nowPlaying ? nowPlaying.songUrl : "https://open.spotify.com/"}
+      href={"https://www.last.fm/user/hizer00"}
       target="_blank"
       className={`${className} bento-spotify__container`}
       style={{ backgroundColor: bgColor }}
