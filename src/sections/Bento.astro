@@ -55,7 +55,72 @@ import ImageBento from "../components/Bento/ImageBento.astro";
     width: 100%;
     align-items: center;
     justify-content: center;
+
+        content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      45deg,
+      #ff595e,
+      #ffca3a,
+      #8ac926,
+      #1982c4,
+      #6a4c93,
+      #ff6700
+    );
+    background-size: 400%;
+    z-index: -1;
+    animation: glow 20s linear infinite;
+    width: 100%;
+    border-radius: 8px;
   }
+
+  .bento__container::before,
+  .bento__container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      45deg,
+      #ff595e,
+      #ffca3a,
+      #8ac926,
+      #1982c4,
+      #6a4c93,
+      #ff6700
+    );
+    background-size: 400%;
+    z-index: -1;
+    animation: glow 20s linear infinite;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .bento__container::after {
+    filter: blur(45px);
+    opacity: .2;
+    transform: translate3d(0, 0, 0);
+  }
+
+@keyframes glow {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
 
   .bento__grid {
     display: grid;
@@ -70,6 +135,7 @@ import ImageBento from "../components/Bento/ImageBento.astro";
       0 2px 4px rgba(0, 0, 0, 0.25),
       0 1px 2px rgba(0, 0, 0, 0.1);
     justify-content: center;
+    background-color: var(--background);
   }
 
   @media only screen and (max-width: 768px) {
