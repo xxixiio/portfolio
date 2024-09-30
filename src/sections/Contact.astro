@@ -7,7 +7,8 @@ import EmailIcon from "../icons/email.astro";
 ---
 
 <section class="contact__container">
-  <h2 class="" id="contact">{t("contact.title")}</h2>
+  <h2 class="contact__badge">{t("contact.title")}</h2>
+  <h2 class="contact__title" id="contact">{t("contact.title2")}</h2>
   <div class="contact__main">
     <div class="contact__text-container">
       <p>
@@ -33,7 +34,7 @@ import EmailIcon from "../icons/email.astro";
   </div>
 </section>
 
-<script>
+<!-- <script>
   const startAnimation = (entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -49,7 +50,7 @@ import EmailIcon from "../icons/email.astro";
   elements.forEach(el => {
     observer.observe(el);
   });
-</script>
+</script> -->
 
 <script>
   const emailButton = document.getElementById("email-button");
@@ -74,16 +75,61 @@ import EmailIcon from "../icons/email.astro";
 </script>
 
 <style>
-  #contact {
-    text-align: center;
-    font-size: 35px;
+  .contact__container {
+    margin: 115px 0;
   }
+
+  .contact__badge {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .contact__title {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 50px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact__title::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: -200px;
+    background: linear-gradient(45deg, #ff595e, #ffca3a, #8ac926, #1982c4, #6a4c93, #ff6700);
+    background-size: 300%;
+    filter: blur(100px);
+    z-index: -100;
+    opacity: .2;
+    animation: glow-anim 6s ease-in-out infinite;
+    border-radius: 10px;
+}
+
+  @keyframes glow-anim {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
   .contact__main {
     display: flex;
     flex-direction: column;
     padding: 0 50px;
     gap: 50px;
+    position: relative;
+    z-index: 100;
   }
 
   .contact__email {
@@ -122,9 +168,21 @@ import EmailIcon from "../icons/email.astro";
     height: auto;
   }
 
+  .link, .contact__email {
+    &:hover {
+      background-color: #ececec31;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+  }
+
   @media only screen and (max-width: 768px) {
     .contact__main {
       padding: 0 18px;
+    }
+
+    .contact__title {
+      font-size: 42px;
     }
   }
 </style>
