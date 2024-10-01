@@ -94,7 +94,7 @@ import ImageBento from "../components/Bento/ImageBento.astro";
       #6a4c93,
       #ff6700
     );
-    background-size: 100%;
+    background-size: 400%;
     z-index: -1;
     animation: glow 20s linear infinite;
     width: 100%;
@@ -138,6 +138,10 @@ import ImageBento from "../components/Bento/ImageBento.astro";
   }
 
   @media only screen and (max-width: 768px) {
+    .bento__container::before {
+      background-size: 100%;
+    }
+
     .bento__grid {
       grid-template-columns: repeat(4, 18vw);
       grid-template-rows: repeat(4, 15vw);

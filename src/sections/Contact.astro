@@ -102,17 +102,12 @@ import EmailIcon from "../icons/email.astro";
     left: 0px;
     right: 0px;
     bottom: -200px;
-    background:-webkit-linear-gradient(45deg, #ff595e, #ffca3a, #8ac926, #1982c4, #6a4c93, #ff6700);
-    background:-moz-linear-gradient(45deg, #ff595e, #ffca3a, #8ac926, #1982c4, #6a4c93, #ff6700);
-    background:-o-linear-gradient(45deg, #ff595e, #ffca3a, #8ac926, #1982c4, #6a4c93, #ff6700);
-    background:-ms-linear-gradient(45deg, #ff595e, #ffca3a, #8ac926, #1982c4, #6a4c93, #ff6700);
     background: linear-gradient(45deg, #ff595e, #ffca3a, #8ac926, #1982c4, #6a4c93, #ff6700);
-    background-size: 100%;
+    background-size: 300%;
     filter: blur(100px);
-    z-index: -100;
     opacity: .2;
     animation: glow-anim 6s ease-in-out infinite;
-    border-radius: 10px;
+    will-change: background-position;
 }
 
   @keyframes glow-anim {
@@ -185,6 +180,10 @@ import EmailIcon from "../icons/email.astro";
 
     .contact__title {
       font-size: 42px;
+    }
+
+    .contact__title::before {
+      background-size: 100%;
     }
   }
 </style>
