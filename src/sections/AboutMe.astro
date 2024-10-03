@@ -179,6 +179,7 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
     justify-content: center;
     gap: 40px;
     margin-top: 50px;
+    flex-wrap: wrap;
   }
 
   .hero__hey {
@@ -211,5 +212,11 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
     75%{
       box-shadow:#ff69b400 0 0 0 6px;
     }
+  }
+
+  @media only screen and (max-width: 768px) {
+  .hero__links {
+    gap: 10px;
+  }
   }
 </style>
