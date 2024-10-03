@@ -6,7 +6,7 @@ import { localizePath } from "astro-i18next";
 import LinkAnchor from "../components/LinkAnchor.astro";
 import GithubIcon from "../icons/github.astro";
 import LinkedinIcon from "../icons/linkedin.astro";
-import CvIcon from "../icons/cv.astro";
+import EmailIcon from "../icons/email.astro";
 import ShortcutMenu from "../components/ShortcutMenu.astro";
 ---
 
@@ -68,6 +68,17 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
         </span>
         Github
       </a>
+      <a
+      class="hero__link"
+      href="mailto:hi@sebjf.dev"
+      title="seb's email"
+      target="__blank"
+    >
+      <span class="hero__link_icon mail">
+        <EmailIcon />
+      </span>
+      hi@sebjf.dev
+    </a>
       <a
         class="hero__link"
         href="https://www.linkedin.com/in/sebastian-j-ferolina-b386822b7/"

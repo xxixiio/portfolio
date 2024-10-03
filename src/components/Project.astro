@@ -9,7 +9,7 @@ interface Project {
   description: String;
   state: Number;
   built_with: String[];
-  url: String;
+  url: string;
   image: String;
   github: String;
 }
@@ -21,7 +21,7 @@ interface Props {
 const { projectData } = Astro.props;
 ---
 
-<div class="project__container">
+<a class="project__container" href={projectData.url} target="__blank">
   <div class="project__image-container">
     <Image
       class="project__image"
@@ -46,10 +46,10 @@ const { projectData } = Astro.props;
       ))}
     </p>
     <div class="project__links">
-      <button href={projectData.url} class="project__button">View Project</button>
+      <p class="project__button">View Project</p>
     </div>
   </div>
-</div>
+</a>
 
 <style>
   .project__container {
@@ -61,25 +61,25 @@ const { projectData } = Astro.props;
     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.6);
     overflow: hidden;
     position: relative;
+    transition: all .2s ease-in;
+    box-shadow: 0 -5px 10px -5px #ffffff1f inset;
   }
 
-  /* Degradado interno */
+  .project__container:hover {
+    cursor: pointer;
+    box-shadow: 0 -15px 30px -15px #ffffff1f inset;
+  }
+
+  .project__container:hover .project__image-container {
+    transform: scale(1.05);
+  }
+
   .project__image-container {
     position: relative;
-    height: 250px;
+    height: 200px;
     overflow: hidden;
     border-radius: 8px;
-  }
-
-  .project__image-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-    z-index: 1;
+    transition: transform 0.3s ease;
   }
 
   .project__image {
@@ -90,9 +90,10 @@ const { projectData } = Astro.props;
   }
 
   .project__content {
-    padding: 12px 12px;
+    padding: 16px 16px;
+    padding-bottom: 0;
     margin-top: 0;
-    height: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -120,12 +121,11 @@ const { projectData } = Astro.props;
   }
 
   .project__tag {
-    color: #808080;
+    color: #979797;
     border-radius: 20px;
     padding: 1px 0;
   }
 
-  /* Botón que aparece con animación */
   .project__button {
     transform: translateY(100%);
     opacity: 0;

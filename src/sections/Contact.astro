@@ -108,6 +108,7 @@ import EmailIcon from "../icons/email.astro";
     opacity: .2;
     animation: glow-anim 6s ease-in-out infinite;
     will-change: background-position;
+    z-index: -5;
 }
 
   @keyframes glow-anim {
@@ -128,7 +129,7 @@ import EmailIcon from "../icons/email.astro";
     padding: 0 50px;
     gap: 50px;
     position: relative;
-    z-index: 100;
+    z-index: 1;
   }
 
   .contact__email {
