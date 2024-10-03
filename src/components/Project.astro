@@ -35,40 +35,18 @@ const { projectData } = Astro.props;
   <div class="project__content">
     <div class="project__info">
       <div class="project__main">
-        <h3 class="project__title">
-          {projectData.name}
-        </h3>
+        <h3 class="project__title">{projectData.name}</h3>
         <ProjectState state={projectData.state} />
       </div>
       <p class="project__description">{projectData.description}</p>
     </div>
     <p class="project__used">
-      {
-        projectData.built_with.map((tech) => (
-          <span class="project__tag">#{tech.toLowerCase()}</span>
-        ))
-      }
+      {projectData.built_with.map((tech) => (
+        <span class="project__tag">#{tech.toLowerCase()}</span>
+      ))}
     </p>
     <div class="project__links">
-      <Button
-        content={t("projects.repositoryButton")}
-        as="a"
-        href={projectData.github}
-        target="__blank"
-        icon={"github"}
-        class:list={"project__button"}
-      />
-      {
-        projectData.url ? (
-          <Button
-            content={t("projects.websiteButton")}
-            as="a"
-            href={projectData.url}
-            target="__blank"
-            icon={"web"}
-          />
-        ) : null
-      }
+      <button href={projectData.url} class="project__button">View Project</button>
     </div>
   </div>
 </div>
@@ -80,22 +58,35 @@ const { projectData } = Astro.props;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    height: 400px;
-    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.6);
-    -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.6);
     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.6);
+    overflow: hidden;
+    position: relative;
   }
 
+  /* Degradado interno */
   .project__image-container {
+    position: relative;
     height: 250px;
     overflow: hidden;
     border-radius: 8px;
+  }
+
+  .project__image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    z-index: 1;
   }
 
   .project__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 0;
   }
 
   .project__content {
@@ -104,6 +95,7 @@ const { projectData } = Astro.props;
     height: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
   }
 
   .project__title {
@@ -131,6 +123,18 @@ const { projectData } = Astro.props;
     color: #808080;
     border-radius: 20px;
     padding: 1px 0;
+  }
+
+  /* Botón que aparece con animación */
+  .project__button {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  .project__container:hover .project__button {
+    transform: translateY(0);
+    opacity: 1;
   }
 
   .project__links {
