@@ -29,6 +29,21 @@ const projects = [
     },
   },
   {
+    name: "Morning Cafe",
+    description:
+      "Responsive web page with café theme using React and Tailwind.",
+    state: 2,
+    built_with: ["React", "Vite", "TypeScript", "Tailwind", "Web"],
+    url: "https://xxixiio-morning-cafe.netlify.app/",
+    image: "morning-cafe.webp",
+    translation: {
+      es: {
+        description:
+          "Página web de responsiva con temática de cafetería hecha con React y Tailwind.",
+      },
+    },
+  },
+  {
     name: "Fast Food Restaurant",
     description:
       "Fast food restaurant web page, done with no frameworks.",
