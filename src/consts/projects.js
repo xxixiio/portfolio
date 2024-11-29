@@ -1,19 +1,19 @@
 const projects = [
-  {
-    name: "white---noise",
-    description:
-      "Search for albums and artists. See the tracklist and play some previews. Used Spotify API.",
-    state: 0,
-    built_with: ["Astro", "Api", "Web"],
-    url: "https://white-noise.vercel.app/",
-    image: "white---noise.jpg",
-    translation: {
-      es: {
-        description:
-          "Buscar álbumes y artistas. Ver la lista de canciones y reproducir algunas vistas previas. Utilizado API de Spotify.",
-      },
-    },
-  },
+  // {
+  //   name: "white---noise",
+  //   description:
+  //     "Search for albums and artists. See the tracklist and play some previews. Used Spotify API.",
+  //   state: 0,
+  //   built_with: ["Astro", "Api", "Web"],
+  //   url: "https://white-noise.vercel.app/",
+  //   image: "white---noise.jpg",
+  //   translation: {
+  //     es: {
+  //       description:
+  //         "Buscar álbumes y artistas. Ver la lista de canciones y reproducir algunas vistas previas. Utilizado API de Spotify.",
+  //     },
+  //   },
+  // },
   {
     name: "Waves Festival",
     description: "Concept webpage for a music festival. Made with Astro.",

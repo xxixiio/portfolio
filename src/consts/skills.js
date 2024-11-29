@@ -54,11 +54,11 @@ const skills = [
     image: "/img/tech/linux-icon.webp",
     color: "yellow",
   },
-  {
-    name: "Penpot",
-    image: "/img/tech/penpot-icon.webp",
-    color: "blue",
-  },
+  // {
+  //   name: "Penpot",
+  //   image: "/img/tech/penpot-icon.webp",
+  //   color: "blue",
+  // },
 ];
 
 export default skills;
