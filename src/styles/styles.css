@@ -136,7 +136,7 @@
     background-color: #9b99c056;
     color: #fff;
     padding: 0 4px;
-    text-decoration: underline dotted;
+    /* text-decoration: underline dotted; */
     border-radius: 2px;
   }
 
