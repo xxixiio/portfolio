@@ -43,21 +43,21 @@ const projects = [
       },
     },
   },
-  {
-    name: "Fast Food Restaurant",
-    description:
-      "Fast food restaurant web page, done with no frameworks.",
-    state: 2,
-    built_with: ["Web"],
-    url: "https://xxixiio.github.io/burguers-web/",
-    image: "fast-food.png",
-    translation: {
-      es: {
-        description:
-          "Página web de restaurante de comida rápida, hecha sin ningun framework.",
-      },
-    },
-  },
+  // {
+  //   name: "Fast Food Restaurant",
+  //   description:
+  //     "Fast food restaurant web page, done with no frameworks.",
+  //   state: 2,
+  //   built_with: ["Web"],
+  //   url: "https://xxixiio.github.io/burguers-web/",
+  //   image: "fast-food.png",
+  //   translation: {
+  //     es: {
+  //       description:
+  //         "Página web de restaurante de comida rápida, hecha sin ningun framework.",
+  //     },
+  //   },
+  // },
   {
     name: "Kuma",
     description:

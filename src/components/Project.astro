@@ -36,7 +36,7 @@ const { projectData } = Astro.props;
     <div class="project__info">
       <div class="project__main">
         <h3 class="project__title">{projectData.name}</h3>
-        <ProjectState state={projectData.state} />
+        <!-- <ProjectState state={projectData.state} /> -->
       </div>
       <p class="project__description">{projectData.description}</p>
     </div>
@@ -111,6 +111,7 @@ const { projectData } = Astro.props;
   }
 
   .project__description {
+    color: var(--gray);
     margin: 3px 0;
   }
 

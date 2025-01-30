@@ -11,10 +11,10 @@ import ImageBento from "../components/Bento/ImageBento.astro";
   <div class="bento__grid">
     <ImageBento class="bento__item bento__1" />
     <ScrollingText class="bento__item bento__2" />
-    <NowPlaying client:load className={"bento__item bento__3"} />
-    <Github class:list={"bento__item bento__4"} />
+    <NowPlaying client:load className={"bento__item bento__clickeable bento__3"} />
+    <Github class:list={"bento__item bento__clickeable bento__4"} />
     <Time class="bento__item bento__5" />
-    <ToBlog class="bento__item bento__6" />
+    <ToBlog class="bento__item bento__clickeable bento__6" />
   </div>
 </div>
 
@@ -183,9 +183,9 @@ import ImageBento from "../components/Bento/ImageBento.astro";
   .bento__item {
     border-radius: 8px;
     transition: all 0.5s ease;
+  }
 
-    &:hover {
+  .bento__clickeable:hover {
       transform: scale(0.96);
-    }
   }
 </style>
