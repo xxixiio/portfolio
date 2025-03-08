@@ -61,7 +61,7 @@ const projects = [
   {
     name: "Kuma",
     description:
-      "Verified Discord bot. Multipurpose bot including fun, interaction, administration commands, and more.",
+      "Verified Discord bot including a variety of commands!",
     state: 3,
     built_with: ["Node.js", "Discord.js", "Bot"],
     url: "https://github.com/xxixiio/kuma",
@@ -69,7 +69,7 @@ const projects = [
     translation: {
       es: {
         description:
-          "Bot verificado de Discord. Bot multipropósito que incluye comandos de diversión, interacción, administración y más.",
+          "Bot verificado de Discord multipropósito que incluye una varidad de comandos.",
       },
     },
   },

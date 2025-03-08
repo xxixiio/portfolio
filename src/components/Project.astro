@@ -1,17 +1,14 @@
 ---
-import { t } from "i18next";
 import { Image } from "astro:assets";
-import Button from "./Button.astro";
-import ProjectState from "./ProjectState.astro";
 
 interface Project {
-  name: String;
-  description: String;
-  state: Number;
-  built_with: String[];
+  name: string;
+  description: string;
+  state: number;
+  built_with: string[];
   url: string;
-  image: String;
-  github: String;
+  image: string;
+  github: string;
 }
 
 interface Props {
@@ -21,138 +18,156 @@ interface Props {
 const { projectData } = Astro.props;
 ---
 
-<a class="project__container" href={projectData.url} target="__blank">
-  <div class="project__image-container">
+<a
+  class="project"
+  href={projectData.url}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <div class="project__image-wrapper">
     <Image
       class="project__image"
       src={"/img/projects/" + projectData.image}
-      alt={projectData.name + " project example"}
-      width={352}
-      height={250}
+      alt={`${projectData.name} project preview`}
+      width={600}
+      height={400}
       loading="lazy"
     />
+    <div class="project__overlay">
+      <span class="project__button">View Project →</span>
+    </div>
   </div>
-  <div class="project__content">
+
+  <div class="project__details">
     <div class="project__info">
-      <div class="project__main">
-        <h3 class="project__title">{projectData.name}</h3>
-        <!-- <ProjectState state={projectData.state} /> -->
-      </div>
+      <h3 class="project__title">{projectData.name}</h3>
       <p class="project__description">{projectData.description}</p>
     </div>
-    <p class="project__used">
-      {projectData.built_with.map((tech) => (
-        <span class="project__tag">#{tech.toLowerCase()}</span>
-      ))}
-    </p>
-    <div class="project__links">
-      <p class="project__button">View Project</p>
+    <div class="project__tags">
+      {
+        projectData.built_with.map((tech) => (
+          <span class="project__tag">#{tech.toLowerCase()}</span>
+        ))
+      }
     </div>
   </div>
 </a>
 
 <style>
-  .project__container {
+  .project {
+    background: rgba(59, 59, 59, 0.075);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.25),
+      0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
     width: 49%;
-    border: solid 1px #494949;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.6);
-    overflow: hidden;
+  }
+
+  .project:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.2);
+    /* box-shadow: 
+      0 10px 30px -15px rgba(0, 0, 0, 0.3),
+      0 0 30px -15px rgba(255, 255, 255, 0.1); */
+  }
+
+  .project__image-wrapper {
     position: relative;
-    transition: all .2s ease-in;
-    box-shadow: 0 -5px 10px -5px #ffffff1f inset;
-  }
-
-  .project__container:hover {
-    cursor: pointer;
-    box-shadow: 0 -15px 30px -15px #ffffff1f inset;
-  }
-
-  .project__container:hover .project__image-container {
-    transform: scale(1.05);
-  }
-
-  .project__image-container {
-    position: relative;
-    height: 200px;
+    aspect-ratio: 16/9;
     overflow: hidden;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
   }
 
   .project__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 0;
+    transition: transform 0.5s ease;
   }
 
-  .project__content {
-    padding: 16px 16px;
-    padding-bottom: 0;
-    margin-top: 0;
-    height: 50%;
+  .project__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .project__button {
+    color: white;
+    font-weight: 500;
+    transform: translateY(20px);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .project:hover .project__overlay {
+    opacity: 1;
+  }
+
+  .project:hover .project__button {
+    transform: translateY(0);
+  }
+
+  .project:hover .project__image {
+    transform: scale(1.1);
+  }
+
+  .project__details {
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    position: relative;
+    gap: 1.5rem;
   }
 
   .project__title {
     margin: 0;
-  }
-
-  .project__main {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: -0.025em;
   }
 
   .project__description {
-    color: var(--gray);
-    margin: 3px 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0.75rem 0 0;
   }
 
-  .project__used {
+  .project__tags {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 5px;
-    gap: 10px;
+    gap: 0.75rem;
   }
 
   .project__tag {
-    color: #979797;
-    border-radius: 20px;
-    padding: 1px 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
   }
 
-  .project__button {
-    transform: translateY(100%);
-    opacity: 0;
-    transition: transform 0.4s ease, opacity 0.4s ease;
+  .project__tag:hover {
+    color: rgba(255, 255, 255, 0.8);
   }
 
-  .project__container:hover .project__button {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  @media (hover: none) {
+    .project__overlay {
+      display: none;
+    }
 
-  .project__links {
-    display: flex;
-    justify-content: space-around;
-    margin-top: auto;
+    .project:hover {
+      transform: none;
+    }
   }
 
   @media only screen and (max-width: 768px) {
-    .project__container {
+    .project {
       width: 100%;
-      height: fit-content;
-    }
-
-    .project__image-container {
-      height: 150px;
     }
   }
 </style>
