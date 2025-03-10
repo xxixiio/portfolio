@@ -4,7 +4,6 @@ import react from "@astrojs/react";
 import vercel from "@astrojs/vercel/serverless";
 import astroI18next from "astro-i18next";
 import mdx from "@astrojs/mdx";
-import svgLoader from "vite-svg-loader";
 
 import partytown from "@astrojs/partytown";
 
