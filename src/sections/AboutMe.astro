@@ -103,6 +103,11 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
     display: inline-block;
   }
 
+  .wave:hover {
+    animation: none; 
+    animation: wave-animation 2.5s infinite;
+  }
+
   @keyframes wave-animation {
     0% {
       transform: rotate(0deg);
