@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  name: string;
+  icon: string;
+  color: string;
+}
+
+
+
+const { name, icon, color } = Astro.props;
+const { default: innerHTML } = await import(`/src/icons/technologies/${icon}?raw`);
+---
+
+<div class="skill__container">
+  <Image
+    class="skill__image"
+    src={icon}
+    alt={name + " logo"}
+    width={30}
+    height={30}
+    loading="eager"
+  />
+  <span class="skill__name">{name}</span>
+</div>
+
+<style>
+  .skill__container {
+    text-align: center;
+    color: white;
+    border: #303030 1px solid;
+    border-radius: 6px;
+    width: 125px;
+    padding: 12px 0;
+    transition: background 0.02s ease-in-out;
+  }
+
+  .skill__image {
+    /* filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg); */
+    color: white;
+    transition: transform 0.1s ease-in;
+  }
+
+  .skill__container:hover {
+    background-color: var(--hover-gray);
+    /* background-color: #ececec31; */
+  }
+
+  .skill__container:hover .skill__image {
+    transform: translateY(-3px);
+  }
+
+  .skill__name {
+    color: #d3d3d3;
+    font-size: 13px;
+  }
+</style>

@@ -1,0 +1,24 @@
+---
+import { t } from "i18next";
+import skills from "../consts/skills.new.js";
+import Skill from "../components/Skill.new.astro";
+---
+
+<section>
+  <h2>{t("skills.title")}</h2>
+  <div class="skills__items">
+    {
+      skills.map((s, i) => (
+        <Skill name={s.name} icon={s.icon} color={s.color} />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .skills__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+</style>
