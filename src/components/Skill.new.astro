@@ -1,5 +1,6 @@
 ---
-import { Image } from "astro:assets";
+// import { Image } from "astro:assets";
+import Svg from "./Svg.astro";
 
 interface Props {
   name: string;
@@ -10,45 +11,45 @@ interface Props {
 
 
 const { name, icon, color } = Astro.props;
-const { default: innerHTML } = await import(`/src/icons/technologies/${icon}?raw`);
+// const { default: innerHTML } = await import(`/src/icons/technologies/${icon}?raw`);
 ---
 
 <div class="skill__container">
-  <Image
-    class="skill__image"
-    src={icon}
-    alt={name + " logo"}
-    width={30}
-    height={30}
-    loading="eager"
-  />
+  <Svg src={icon} class="skill__image" style={{ color: color }} />
   <span class="skill__name">{name}</span>
 </div>
 
 <style>
   .skill__container {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
+    gap: 8px;
     color: white;
     border: #303030 1px solid;
     border-radius: 6px;
     width: 125px;
     padding: 12px 0;
-    transition: background 0.02s ease-in-out;
+    transition: background 0.1s ease-in;
   }
 
   .skill__image {
     /* filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg); */
-    color: white;
-    transition: transform 0.1s ease-in;
+    filter: brightness(0) invert(1);
+    width: 25px;
+    height: 25px;
+    /* transition: transform 0.2s ease-in; */
+    transition: all 0.3s ease-out;
   }
 
   .skill__container:hover {
     background-color: var(--hover-gray);
-    /* background-color: #ececec31; */
   }
 
   .skill__container:hover .skill__image {
     transform: translateY(-3px);
+    filter: brightness(1) invert(0);
   }
 
   .skill__name {
