@@ -1,6 +1,7 @@
 ---
 import { changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro";
+import AuraLight from "../components/AuraLight.astro";
 import AboutMe from "../sections/AboutMe.astro";
 import Header from "../sections/Header.astro";
 import Footer from "../sections/Footer.astro";
@@ -15,15 +16,18 @@ changeLanguage("en");
 ---
 
 <Layout title="Seb's portfolio | Web developer" description="Welcome to my personal portfolio, where I showcase my latest projects and creations.">
-  <Header />
-  <main>
-    <AboutMe />
-    <Bento />
-    <SkillsNew />
-    <!-- <Skills /> -->
-    <Experience />
-    <Projects />
-    <Contact />
-  </main>
-  <Footer />
+  <AuraLight />
+  <div class="content">
+    <Header />
+    <main>
+      <AboutMe />
+      <!-- <Bento /> -->
+      <SkillsNew />
+      <!-- <Skills /> -->
+      <Experience />
+      <Projects />
+      <Contact />
+    </main>
+    <Footer />
+  </div>
 </Layout>

@@ -56,13 +56,19 @@
   }
 
   body {
+    position: relative;
     margin: 0 auto;
     padding: 0;
     color: var(--text);
     background-color: var(--background);
-    max-width: var(--max-w);
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .content {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0;
   }
 
   a {
@@ -171,7 +177,7 @@
   }
 
   @media only screen and (max-width: 768px) {
-    body {
+    .content {
       padding: 30px;
       margin: 0 auto;
     }
