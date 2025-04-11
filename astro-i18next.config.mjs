@@ -1,5 +1,5 @@
-import en from "./public/locales/en/translation.json" assert {type: "json"};
-import es from "./public/locales/es/translation.json" assert {type: "json"};
+import en from "./public/locales/en/translation.json" with {type: "json"};
+import es from "./public/locales/es/translation.json" with {type: "json"};
 
 /** @type {import('astro-i18next').AstroI18nextConfig} */
 export default {
