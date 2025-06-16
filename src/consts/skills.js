@@ -59,6 +59,7 @@ const skills = [
   //   image: "/img/tech/penpot-icon.webp",
   //   color: "blue",
   // },
+  
 ];
 
 export default skills;
