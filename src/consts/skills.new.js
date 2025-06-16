@@ -46,14 +46,13 @@ const skills = [
         "icon": "/img/technologies/figma.svg",
         "color": "#F24E1E",
         "description": "Collaborative design tool for UI/UX projects."
-    }
-    ,
-    {
+    },
+    /*{
         "name": "n8n",
         "icon": "/img/technologies/n8n.svg",
         "color": "#E94B71",
         "description": "Lorem."
-    }
+    }*/
 ];
 
 export default skills;
