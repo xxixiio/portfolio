@@ -20,4 +20,8 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# vsc/idx settings
+.vscode
+.idx
+
 node_modules
