@@ -1,5 +1,5 @@
-import en from "./public/locales/en/translation.json" with {type: "json"};
-import es from "./public/locales/es/translation.json" with {type: "json"};
+import en from "./public/locales/en/translation.json";
+import es from "./public/locales/es/translation.json";
 
 /** @type {import('astro-i18next').AstroI18nextConfig} */
 export default {
@@ -23,6 +23,6 @@ export default {
     },
     initImmediate: false,
     preload: true,
-    backend: null,
+    //backend: null,
   },
 };
