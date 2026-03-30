@@ -20,8 +20,8 @@ const { title, description } = Astro.props;
     <SEO title={title} description={description} />
   </head>
   <body>
-    <CommandMenu client:load>
-      <slot />
-    </CommandMenu>
+    <!-- <CommandMenu client:load> -->
+    <slot />
+    <!-- </CommandMenu> -->
   </body>
 </html>
