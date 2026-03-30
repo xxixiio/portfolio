@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/resume",
-      "destination": "/files/cv.pdf",
+      "destination": "/files/resume.pdf",
       "permanent": false
     }
   ]
