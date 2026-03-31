@@ -17,7 +17,7 @@ export default defineConfig({
       noExternal: ["path-to-regexp"],
     },
   },
-  site: "https://sebjf.dev",
+  site: "https://sebastianjf.com",
   integrations: [
     sitemap(),
     astroI18next(),
