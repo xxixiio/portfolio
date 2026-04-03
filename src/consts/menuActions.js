@@ -37,7 +37,7 @@ const menuActions = [
     shortcut: ["e", "m"],
     keywords: "hi hello contact",
     section: "contact",
-    perform: () => window.open("mailto:hi@sebjf.dev", "_blank"),
+    perform: () => window.open("mailto:hi@sebastianjf.com", "_blank"),
   },
   {
     id: "linkedin",

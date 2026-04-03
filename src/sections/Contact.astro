@@ -16,7 +16,7 @@ import EmailIcon from "../icons/email.astro";
         <br>
         <br>
         {t("contact.text2")} 
-        <LinkAnchor to="mailto:hi@sebjf.dev" content="email" /> 
+        <LinkAnchor to="mailto:hi@sebastianjf.com" content="email" /> 
         {t("contact.text3")} 
         <LinkAnchor to="https://www.linkedin.com/in/sebastian-j-ferolina/" content="LinkedIn" target="_blank" /> 
         {t("contact.text4")} 
@@ -26,7 +26,7 @@ import EmailIcon from "../icons/email.astro";
       <Tooltip content={"Click to copy"} id="email-tooltip">
         <button class="contact__email" id="email-button">
           <EmailIcon class:list={"contact__email-icon"} />
-          hi@sebjf.dev
+          hi@sebastianjf.com
         </button>
       </Tooltip>
       <LinkAnchor to="https://www.linkedin.com/in/sebastian-j-ferolina/" content="LinkedIn" target="_blank" />
@@ -58,7 +58,7 @@ import EmailIcon from "../icons/email.astro";
 
   emailButton.addEventListener("click", () => {
     navigator.clipboard
-      .writeText("hi@sebjf.dev")
+      .writeText("hi@sebastianjf.com")
       .then(() => {
         emailTooltip.textContent = "Copied"
         setTimeout(() => {
