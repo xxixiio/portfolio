@@ -45,7 +45,7 @@ const menuActions = [
     shortcut: ["l", "i"],
     keywords: "contact li",
     section: "contact",
-    perform: () => window.open("https://www.linkedin.com/in/sebastian-j-ferolina-b386822b7/", "_blank"),
+    perform: () => window.open("https://www.linkedin.com/in/sebastian-jf/", "_blank"),
   },
   {
     id: "github",
