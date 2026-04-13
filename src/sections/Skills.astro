@@ -6,19 +6,32 @@ import Skill from "../components/Skill.astro";
 
 <section>
   <h2>{t("skills.title")}</h2>
-  <div class="skills__items">
+  <div class="skills__grid">
     {
       skills.map((s, i) => (
-        <Skill name={s.name} image={s.image} color={s.color} />
+        <Skill name={s.name} icon={s.icon} color={s.color} />
       ))
     }
   </div>
 </section>
 
 <style>
-  .skills__items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  .skills__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 16px;
+    justify-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .skills__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .skills__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 </style>
