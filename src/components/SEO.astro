@@ -21,25 +21,33 @@ const { title, description } = Astro.props;
 
 <link rel="sitemap" href="/sitemap-index.xml" />
 
-<meta name="keywords" content="seb, xxixiio, portfolio, developer, web developer, projects, creations, web applications" />
+<meta
+  name="keywords"
+  content="sebastian jf, seb, sebastian, xxixiio, portfolio, developer, web developer, projects, creations, web applications"
+/>
 <meta name="generator" content={Astro.generator} />
 
 <meta name="author" content="xxixiio" />
 <meta name="copyright" content="xxixiio" />
-<meta name="publisher" content="xxixiio">  
+<meta name="publisher" content="xxixiio" />
 
 <meta name="robots" content="index, follow" />
 <meta name="googlebot" content="index, follow" />
 
 <link rel="canonical" href="https://www.sebastianjf.com" />
 
-<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-R50CY9YR3V"></script>
+<script
+  type="text/partytown"
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-R50CY9YR3V"></script>
 <script type="text/partytown">
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-  gtag('config', 'G-R50CY9YR3V');
+  gtag("config", "G-R50CY9YR3V");
 </script>
 
 <HeadHrefLangs />
