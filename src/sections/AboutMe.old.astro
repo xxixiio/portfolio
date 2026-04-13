@@ -24,48 +24,51 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
     <div>
       <h1 class="hero__name accent">seb</h1>
       <!-- <p class="hero__username">@xxixiio</p> -->
-      <a class="hero__undername" href="#contact"
-        ><span class="pulse_dot"></span> {t("hero.availableForWork")}</a
-      >
+      <a class="hero__undername" href="#contact"><span class="pulse_dot"></span> {t("hero.availableForWork")}</a>
     </div>
   </div>
-  <h2 class="hero__hey accent">
-    <span class="wave">👋</span> {t("hero.hey")}
-  </h2>
-
+  <h2 class="hero__hey accent"><span class="wave">👋</span> Hey! ——</h2>
   <p>
-    {t("hero.aboutme1")}
-    <br /><br />
-
-    <Trans i18nKey="hero.aboutme2">
-      I build <span class="highlight">web experiences</span> focused on clarity, performance,
-      and precision.
+    <Trans i18nKey="hero.aboutme1">
+      I am a <span class="highlight">Front-end Developer</span> currently a student specializing in microcomputer systems and networks, based in Spain.
     </Trans>
-    <br /><br />
-
-    {t("hero.aboutme3")}
-    <br /><br />
-
-    {t("hero.projectsText")}
+    <br />
+    <br />
+    <Trans i18nKey="hero.aboutme2">
+      As an avid learner, I constantly seek opportunities to grow and explore new challenges.
+      I love experimenting with new techniques and coding on personal projects, which
+      helps me refine my skills and discover my unique style while making a real impact
+      with the products I work with.
+    </Trans>
+    <br />
+    <br />
+    <Trans i18nKey="hero.aboutme3">
+      In this portfolio, <span class="highlight">you can find samples of my recent works and the skills I am
+      developing.</span> To me, every project here is a step toward mastering my craft, so
+      I hope it is not only objectively great but that passion is shown in the final
+      piece.
+    </Trans>
+    <br />
+    <br />
+    {t("hero.projectsText")} 
     <LinkAnchor content={t("hero.projectsButton")} to="#projects" />.
     <br />
-
-    {t("hero.contactText")}
+    {t("hero.contactText")} 
     <LinkAnchor content={t("hero.contactButton")} to="#contact" />!
   </p>
   <div class="hero__links">
     <a
-      class="hero__link"
-      href="https://github.com/xxixiio/"
-      title="seb's Github page"
-      target="__blank"
-    >
-      <span class="hero__link_icon">
-        <GithubIcon />
-      </span>
-      Github
-    </a>
-    <a
+        class="hero__link"
+        href="https://github.com/xxixiio/"
+        title="seb's Github page"
+        target="__blank"
+      >
+        <span class="hero__link_icon">
+          <GithubIcon />
+        </span>
+        Github
+      </a>
+      <a
       class="hero__link"
       href="mailto:hi@sebastianjf.com"
       title="seb's email"
@@ -76,17 +79,17 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
       </span>
       hi@sebastianjf.com
     </a>
-    <a
-      class="hero__link"
-      href="https://wwww.linkedin.com/in/sebastian-jf/"
-      title="seb's Linkedin page"
-      target="__blank"
-    >
-      <span class="hero__link_icon">
-        <LinkedinIcon />
-      </span>
-      LinkedIn
-    </a>
+      <a
+        class="hero__link"
+        href="https://wwww.linkedin.com/in/sebastian-jf/"
+        title="seb's Linkedin page"
+        target="__blank"
+      >
+        <span class="hero__link_icon">
+          <LinkedinIcon />
+        </span>
+        LinkedIn
+      </a>
   </div>
   <!-- <ShortcutMenu /> -->
 </section>
@@ -101,7 +104,7 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
   }
 
   .wave:hover {
-    animation: none;
+    animation: none; 
     animation: wave-animation 2.5s infinite;
   }
 
@@ -168,7 +171,7 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
     color: #fff;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: underline
     }
   }
 
@@ -201,24 +204,24 @@ import ShortcutMenu from "../components/ShortcutMenu.astro";
   .pulse_dot {
     height: 8px;
     width: 8px;
-    display: block;
-    border-radius: 50%;
-    background-color: #62bd19;
-    animation: pulse 1500ms infinite;
+    display:block;
+    border-radius:50%;
+    background-color:#62bd19;
+    animation:pulse 1500ms infinite;
   }
 
   @keyframes pulse {
-    0% {
-      box-shadow: #62bd19 0 0 0 0;
+    0%{
+      box-shadow:#62bd19 0 0 0 0;
     }
-    75% {
-      box-shadow: #ff69b400 0 0 0 6px;
+    75%{
+      box-shadow:#ff69b400 0 0 0 6px;
     }
   }
 
   @media only screen and (max-width: 768px) {
-    .hero__links {
-      gap: 10px;
-    }
+  .hero__links {
+    gap: 10px;
+  }
   }
 </style>

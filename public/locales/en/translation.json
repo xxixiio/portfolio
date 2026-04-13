@@ -1,9 +1,10 @@
 {
   "hero": {
+    "hey": "Hello!",
     "title": "About me",
-    "aboutme1": "I am a <0>Front-end Developer</0> currently a student specializing in microcomputer systems and networks, based in Spain.",
-    "aboutme2": "As an avid learner, I constantly seek opportunities to grow and explore new challenges. I love experimenting with new techniques and coding on personal projects, which helps me refine my skills and discover my unique style while making a real impact with the products I work with.",
-    "aboutme3": "In this portfolio, <0>you can find samples of my recent works and the skills I am developing.</0> To me, every project here is a step toward mastering my craft, so I hope it is not only objectively great but that passion is shown in the final piece.",
+    "aboutme1": "Welcome to my portfolio.",
+    "aboutme2": "I build <0>web experiences</0> focused on clarity, performance, and precision. Based in Barcelona, with a background in Microcomputer Systems and Networks.",
+    "aboutme3": "In this portfolio, you'll find a selection of my work and ongoing development.",
     "projectsText": "Take a look into",
     "projectsButton": "my projects",
     "contactText": "Let's talk,",
