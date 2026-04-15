@@ -4,6 +4,11 @@
       "source": "/resume",
       "destination": "/files/resume.pdf",
       "permanent": false
+    },
+    {
+      "source": "/es/resume",
+      "destination": "/files/resume-es.pdf",
+      "permanent": false
     }
   ]
 }
