@@ -8,17 +8,17 @@ import CloseIcon from "../icons/close.astro";
 
 <header class="header__container" id="header">
   <p>
-    <a href={localizePath("#")} class="header__title">
+    <a href={localizePath("/")} class="header__title">
       <img class="header__logo" src="/img/logo/seb-white.png" alt="seb logo">
     </a>
   </p>
   <MenuIcon class:list={"header__icon header__icon--menu"} id="header-menu-icon" />
   <CloseIcon class:list={"header__icon header__icon--close"} id="header-close-icon" style="display: none;" />
   <ul class="header__list" id="header-navbar">
-    <li><a href={localizePath("#")} title="About me">{t("hero.title")}</a></li>
-    <li><a href={localizePath("#experience")} title="Experience">{t("experience.title")}</a></li>
-    <li><a href={localizePath("#projects")} title="Projects">{t("projects.title")}</a></li>
-    <li><a href={localizePath("#contact")} title="Contact">{t("contact.title")}</a></li>
+    <li><a class="header__anchor" href={localizePath("/#")} title="About me">{t("hero.title")}</a></li>
+    <li><a class="header__anchor" href={localizePath("/#experience")} title="Experience">{t("experience.title")}</a></li>
+    <li><a class="header__anchor" href={localizePath("/#projects")} title="Projects">{t("projects.title")}</a></li>
+    <li><a class="header__anchor" href={localizePath("/#contact")} title="Contact">{t("contact.title")}</a></li>
     <!-- <li><a href={localizePath("/blog")} title="Blog">Blog</a></li> -->
     <li><LanguageSelector /></li>
   </ul>
@@ -54,6 +54,43 @@ import CloseIcon from "../icons/close.astro";
       $menuIcon.style.display = 'inline';
       $closeIcon.style.display = 'none';
     }
+  });
+</script>
+
+<script>
+  const $header = document.getElementById("header");
+  const headerAnchors = document.querySelectorAll<HTMLElement>(".header__anchor");
+
+  let prevY = window.scrollY;
+  let isNavigating = false;
+  let scrollTimeout;
+
+  window.addEventListener("scroll", () => {
+    if (isNavigating) {
+      clearTimeout(scrollTimeout);
+
+      scrollTimeout = setTimeout(() => {
+        isNavigating = false;
+        prevY = window.scrollY;
+      }, 150);
+
+      return;
+    }
+
+    if (window.scrollY > prevY) {
+      $header.classList.add("header__hide");
+    } else {
+      $header.classList.remove("header__hide");
+    }
+
+    prevY = window.scrollY;
+  });
+
+  headerAnchors.forEach((element) => {
+    element.addEventListener("click", () => {
+      isNavigating = true;
+      $header.classList.remove("header__hide");
+    });
   });
 </script>
 
@@ -170,20 +207,3 @@ import CloseIcon from "../icons/close.astro";
     }
   }
 </style>
-
-<script>
-  const $header = document.getElementById("header");
-  let prevY = 0;
-
-  window.onscroll = (e) => {
-    if (window.scrollY > prevY) {
-      $header.classList.add("header__hide");
-    } else if (window.scrollY < prevY || window.scrollY < 0) {
-      $header.classList.remove("header__hide");
-    }
-
-    if (!(window.scrollY < 0)) {
-      prevY = window.scrollY;
-    }
-  };
-</script>
