@@ -1,49 +1,90 @@
+# Portfolio
 
-# 🐷🦀 Seb's porfolio 
+Personal portfolio website built to showcase my projects, skills, and experience as a Front-end Developer.
 
-My personal portfolio. Made with Astro Build.
+## ✨ About
 
+A clean and minimal portfolio focused on presenting selected projects, technical skills, and professional experience.
 
+The goal of this project is not only to serve as a portfolio, but also as a reflection of my approach to development: performance, simplicity, and attention to detail.
 
+## ⚡ Features
 
-## Environment Variables
+* Responsive design for desktop and mobile
+* Smooth navigation and clean UI
+* Project showcase section
+* Skills and technologies overview
+* Experience timeline
+* Contact section
+* SEO-friendly structure
+* Fast and lightweight performance
 
-To run this project, you will need to add the following environment variables to your .env file, follow `.env.template`
+## 🛠 Tech Stack
 
-`SPOTIFY_CLIENT_ID`
+* HTML5
+* CSS3
+* JavaScript
+* TypeScript
+* Astro
+* React
+* Tailwind CSS
 
-`SPOTIFY_CLIENT_SECRET`
+## 📁 Project Structure
 
-`SPOTIFY_REFRESH_TOKEN`
-## CMS Integration
+```text
+portfolio/
+├── public/
+├── src/
+│   ├── components/
+│   ├── layouts/
+│   ├── pages/
+│   ├── styles/
+│   └── assets/
+├── package.json
+└── README.md
+```
 
-To create blog posts I use [TinaCMS](https://tina.io/). It only runs locally. See [the docs](https://tina.io/docs/).
+## 📦 Installation
 
-- Run the app.
-```sh
+Clone the repository:
+
+```bash
+git clone https://github.com/xxixiio/portfolio.git
+```
+
+Move into the project folder:
+
+```bash
+cd portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
+
+```bash
 npm run dev
 ```
-- Enter the following URL.
+
+## 🔨 Build
+
+Build for production:
+
+```bash
+npm run build
 ```
-http://localhost:4321/admin/index.html
+
+Preview production build:
+
+```bash
+npm run preview
 ```
-- You'll see some templates to create posts.
-- After creating a post, push the new post to the repository.
-## Other dependencies
-- [kbar](https://kbar.vercel.app/) - To create the command menu.
-- [astro-i18next](https://github.com/yassinedoghri/astro-i18next) - Multilanguage support.
-## Scripts
-- `npm run dev` - Astro preview.
-- `npm run dev:host` - Astro preview + host.
-- `npm run dev:tina` - Astro preview + Run TinaCMS server.
-- `npm run dev:tinahost` - Astro preview + Run TinaCMS server + host.
-- `npm run i18next` - Generate i18next files.
-## Authors
 
-- [@xxixiio](https://www.github.com/xxixiio)
-
-
-## License
+## 📄 License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
