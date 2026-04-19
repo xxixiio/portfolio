@@ -36,10 +36,13 @@ portfolio/
 ├── public/
 ├── src/
 │   ├── components/
+│   ├── consts/
+│   ├── icons/
 │   ├── layouts/
 │   ├── pages/
+│   ├── sections/
 │   ├── styles/
-│   └── assets/
+│   └── utils/
 ├── package.json
 └── README.md
 ```
